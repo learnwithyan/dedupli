@@ -1,26 +1,42 @@
 // import * as vscode from 'vscode';
 var vscode = require('vscode');
+const fs = require('fs');
+const path = require('path');
+
+//extId
+var extId = 'learnwithyan.dedupli';
+//for localization commands
+// var localizeCmds = require('vscode-nls').loadMessageBundle();
+var localizeVars = require('vscode-nls').loadMessageBundle();
+
+//path of ext
+var extensionPath = vscode.extensions.getExtension(extId).extensionPath;
 
 //to store sb items
 var sbVars = {};
 
 function activate(context) {
-  // let uri = vscode.window.activeTextEditor.document.uri;
-  // let config = vscode.workspace.getConfiguration('extension', uri);
+  //get user lng
+  var language = vscode.env.language;
 
-  // let inspect = config.inspect('lineBreak');
+  //get user lng json for variables
+  localizeVars.translations = require(`./translations/${language}/${language}.json`);
 
-  // console.log('inspect.key:', inspect.key);
-  // console.log('inspect.defaultValue:', inspect.defaultValue);
-  // console.log('inspect.globalValue:', inspect.globalValue);
-  // console.log('inspect.workspaceValue:', inspect.workspaceValue);
-  // console.log('inspect.workspaceFolderValue:', inspect.workspaceFolderValue);
-  // return;
+  //trnsl readme file but not automatically it open a window just
+  // trnslReadme(vscode, language);
 
-  // var lineBreak = config.get('lineBreak');
+  //get all nls files
+  // console.log(getNlsFile(vscode, language));
+  var lnsFileJSON = getNlsFile(vscode, language);
+  // console.log(lnsFileJSON);
+
+  const commandTitle = lnsFile['dedupli.remDuplicates'];
+
   var disposableremDuplicates = vscode.commands.registerCommand(
     'dedupli.remDuplicates',
     function () {
+      vscode.window.showInformationMessage(commandTitle);
+
       var editor = vscode.window.activeTextEditor;
       if (!editor) {
         return; // No open text editor
@@ -65,7 +81,6 @@ function activate(context) {
           distinct: distinct_lines,
           duplicate: duplicate_lines,
         };
-
         infoMsg(vscode, 'Duplicates removed', counter);
         distinct_lines.length = 0;
         duplicate_lines.length = 0;
@@ -146,10 +161,17 @@ function countStatusBarItem(vscode, counter) {
       duplicate_counter = counter[key].length;
     }
   }
+
+  const distinctLinesCounter =
+    localizeVars.translations['distinctLinesCounter'];
+  const duplicatedLinesCounter =
+    localizeVars.translations['duplicatedLinesCounter'];
+  const symbolsLinesCounter = localizeVars.translations['symbolsLinesCounter'];
+
   chgStatusBarItem(
     vscode,
     'barDistinct',
-    'Distinct lines counter',
+    distinctLinesCounter,
     'statusBarItem.errorBackground',
     'snake',
     distinct_counter
@@ -158,8 +180,8 @@ function countStatusBarItem(vscode, counter) {
   chgStatusBarItem(
     vscode,
     'barDuplicate',
-    'Duplicated lines counter',
-    'statusBarItem.errorBackground',
+    duplicatedLinesCounter,
+    'statusBarItem.warningBackground',
     'files',
     duplicate_counter
   );
@@ -167,7 +189,7 @@ function countStatusBarItem(vscode, counter) {
   chgStatusBarItem(
     vscode,
     'barLetters',
-    'Letters lines counter',
+    symbolsLinesCounter,
     'statusBarItem.errorBackground',
     'text-size',
     letters_counter
@@ -186,7 +208,7 @@ function chgStatusBarItem(vscode, sb_name, desc, color, icon, count_numb) {
   sbVars[sb_name].show();
 }
 
-// vscode helpers
+// ext helpers
 function infoMsg(vscode, msg, counter = '') {
   countStatusBarItem(vscode, counter);
   vscode.window.showInformationMessage(msg);
@@ -194,4 +216,69 @@ function infoMsg(vscode, msg, counter = '') {
 function warnMsg(vscode, msg, counter = '') {
   countStatusBarItem(vscode, counter);
   vscode.window.showWarningMessage(msg);
+}
+//translate readme
+function trnslReadme(vscode, language) {
+  const translationsPath = path.join(
+    extensionPath,
+    'translations',
+    language,
+    'README.md'
+  );
+  const defaultPath = path.join(extensionPath, 'README.md');
+
+  let readmeContent;
+
+  try {
+    readmeContent = fs.readFileSync(translationsPath, 'utf8');
+    console.log(readmeContent);
+  } catch (error) {
+    // Fallback to the default README.md if translation not available
+    readmeContent = fs.readFileSync(defaultPath, 'utf8');
+  }
+  //update readme
+  const panel = vscode.window.createWebviewPanel(
+    'translatedReadme',
+    'Translated README',
+    vscode.ViewColumn.One,
+    { enableScripts: true, retainContextWhenHidden: true }
+  );
+  const htmlContent = fs.readFileSync(
+    path.join(__dirname, '/translations/translreadme.html')
+  );
+
+  // Replace a placeholder in the HTML content with the dynamic value
+  const finalHtml = htmlContent
+    .toString()
+    .replace('{{translatedReadme}}', readmeContent);
+
+  // Set the HTML content in the webview panel
+  panel.webview.html = finalHtml;
+}
+
+//get LNS
+function getNlsFile(vscode, languageCode) {
+  const localizeCmds =
+    vscode.extensions.getExtension(extId).packageJSON.localize;
+
+  for (const matchingFile of localizeCmds) {
+    if (matchingFile.includes(languageCode)) {
+      try {
+        // Read the content of the matching file as JSON
+        console.log(path.join(__dirname, matchingFile));
+        var content = fs.readFileSync(
+          path.join(__dirname, matchingFile),
+          'utf8'
+        );
+        const jsonContent = JSON.parse(content);
+        return jsonContent;
+      } catch (error) {
+        console.error(
+          `Error reading or parsing ${matchingFile} as JSON:`,
+          error.message
+        );
+      }
+    }
+  }
+  return null; // If no matching file is found
 }

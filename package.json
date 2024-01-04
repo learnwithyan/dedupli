@@ -23,7 +23,7 @@
     "commands": [
       {
         "command": "dedupli.remDuplicates",
-        "title": "DeDupli - remove duplicates from selected",
+        "title": "DeDupli - 1remove duplicates from selected",
         "icon": "$(sort-precedence)"
       },
       {
@@ -33,6 +33,10 @@
       }
     ]
   },
+  "localize": [
+    "package.nls.json",
+    "package.ru.nls.json"
+  ],
   "configuration": {
     "title": "Dedupli Configarations",
     "properties": {
@@ -47,5 +51,8 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/learnwithyan/dedupli.git"
+  },
+  "dependencies": {
+    "vscode-nls": "^5.2.0"
   }
 }
