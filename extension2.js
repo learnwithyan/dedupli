@@ -3,6 +3,7 @@ var vscode = require('vscode');
 
 //to store sb items
 var sbVars = {};
+var sbVarscounter = 0;
 
 function activate(context) {
   // let uri = vscode.window.activeTextEditor.document.uri;
@@ -40,6 +41,8 @@ function activate(context) {
           duplicate_lines.push(el);
         }
       });
+      console.log(distinct_lines);
+      console.log(duplicate_lines);
 
       if (duplicate_lines.length > 0 && distinct_lines.length == 0) {
         editor.edit(function (editBuilder) {
@@ -55,7 +58,7 @@ function activate(context) {
         var counter = {
           distinct: distinct_lines,
         };
-        warnMsg(vscode, 'List has not duplicates', counter);
+        // warnMsg('List has not duplicates', counter);
         duplicate_lines.length = 0;
       } else if (duplicate_lines.length > 0 && distinct_lines.length > 0) {
         editor.edit(function (editBuilder) {
@@ -66,7 +69,7 @@ function activate(context) {
           duplicate: duplicate_lines,
         };
 
-        infoMsg(vscode, 'Duplicates removed', counter);
+        // infoMsg( 'Duplicates removed', counter);
         distinct_lines.length = 0;
         duplicate_lines.length = 0;
       }
@@ -95,9 +98,9 @@ function activate(context) {
           editBuilder.replace(selection, random_lines.join('\n'));
         });
 
-        infoMsg(vscode, 'Lines shuffled');
+        infoMsg('Lines shuffled');
       } else {
-        warnMsg(vscode, "List wasn't shuffled");
+        warnMsg("List wasn't shuffled");
       }
     }
   );
@@ -107,6 +110,7 @@ function activate(context) {
 }
 exports.activate = activate;
 
+// this method is called when your extension is deactivated
 function deactivate() {}
 exports.deactivate = deactivate;
 
@@ -125,73 +129,161 @@ function countStatusBarItem(vscode, counter) {
   var distinct_counter = 0;
   var duplicate_counter = 0;
   var letters_counter = 0;
+  return '123';
+  // const parameters = [...arguments];
+
+  // parameters.forEach((param, index) => {
+  //   console.log('Parameter ' + (index + 1) + ': ' + param);
+  // });
+
   for (var key in counter) {
     if (key == 'distinct') {
       //length of lines
-      let value = counter[key];
+      value = counter[key];
       distinct_counter = parseInt(value.length);
       //letters count
-      for (var i = 0; i < parseInt(value.length); i++) {
+      for (var i = 0; i < value.length; i++) {
         var currentString = value[i];
+
         // Count the number of letters in the current string
         for (var j = 0; j < currentString.length; j++) {
           // Check if the character is a letter (assuming only alphabetic characters)
-          if (currentString[j].match(/[a-zA-Z0-9]/)) {
+          if (currentString[j].match(/[a-zA-Z]/)) {
             letters_counter++;
           }
         }
+
+        // console.log(key + ': ' + parseInt(counter[key].length));
       }
     }
     if (key == 'duplicate') {
       duplicate_counter = counter[key].length;
+      // console.log(key + ': ' + counter[key]);
     }
   }
-  chgStatusBarItem(
-    vscode,
-    'barDistinct',
-    'Distinct lines counter',
-    'statusBarItem.errorBackground',
-    'snake',
-    distinct_counter
+  // //distinct lines
+  console.log(
+    chgStatusBarItem(
+      'barDistinct',
+      'statusBarItem.errorBackground',
+      distinct_counter
+    )
   );
+  // barDistinct = vscode.window.createStatusBarItem(
+  //   vscode.StatusBarAlignment.Left
+  // );
+  // barDistinct.text = `$(selection) ${distinct_counter}`;
+  // barDistinct.tooltip = 'Lines count';
+  // barDistinct.backgroundColor = new vscode.ThemeColor(
+  //   'statusBarItem.errorBackground'
+  // );
+  // barDistinct.show();
 
-  chgStatusBarItem(
-    vscode,
-    'barDuplicate',
-    'Duplicated lines counter',
-    'statusBarItem.errorBackground',
-    'files',
-    duplicate_counter
-  );
+  // //Duplicates count
+  // chgStatusBarItem(
+  //   'barDuplicate',
+  //   'statusBarItem.errorBackground',
+  //   duplicate_counter
+  // );
+  // barDuplicate = vscode.window.createStatusBarItem(
+  //   vscode.StatusBarAlignment.Left
+  // );
+  // barDuplicate.text = `$(files) ${duplicate_counter}`;
+  // barDuplicate.tooltip = 'Duplicates count';
+  // barDuplicate.backgroundColor = new vscode.ThemeColor(
+  //   'statusBarItem.errorBackground'
+  // );
+  // barDuplicate.show();
 
-  chgStatusBarItem(
-    vscode,
-    'barLetters',
-    'Letters lines counter',
-    'statusBarItem.errorBackground',
-    'text-size',
-    letters_counter
-  );
+  //letters
+  // chgStatusBarItem(
+  //   'barLetters',
+  //   'statusBarItem.errorBackground',
+  //   letters_counter
+  // );
+  // const barLetters = vscode.window.createStatusBarItem(
+  //   vscode.StatusBarAlignment.Left
+  // );
+  // if (barLetters) {
+  //   barLetters.text = `$(files) ${letters_counter}`;
+  //   barLetters.tooltip = 'Letters count';
+  //   barLetters.backgroundColor = new vscode.ThemeColor(
+  //     'statusBarItem.errorBackground'
+  //   );
+  //   barLetters.show();
+  // }
 }
 //counter helpers
-function chgStatusBarItem(vscode, sb_name, desc, color, icon, count_numb) {
+function chgStatusBarItem(sb_name, color, count_numb) {
+  return 'sbVars';
+  // sb_name.hide();
+  // if (!sbVars.hasOwnProperty(sb_name)) {
+  //   sbVars[sb_name] = 'New Value';
+  //   console.log(sbVars[sb_name]);
+  // } else {
+  //   sbVars[sb_name] = '1';
+  //   console.log(sbVars[sb_name]);
+  // }
+  // if (typeof sb_name === 'undefined') {
+  //   sb_name = 1;
+  //   console.log('ne');
+  //   console.log(sb_name);
+  // } else {
+  //   console.log(sb_name);
+  // }
   if (!sbVars.hasOwnProperty(sb_name)) {
     sbVars[sb_name] = vscode.window.createStatusBarItem(
       vscode.StatusBarAlignment.Left
     );
+    console.log('ne');
+    // context.globalState.update(sb_name, sb_name_val);
+  } else {
+    console.log('yes');
+    sbVars[sb_name].text = `$(files) ${count_numb}`;
+    sbVars[sb_name].tooltip = 'Letters count';
+    sbVars[sb_name].backgroundColor = new vscode.ThemeColor(color);
+    sbVars[sb_name].show();
   }
-  sbVars[sb_name].text = `$(${icon}) ${count_numb}`;
-  sbVars[sb_name].tooltip = desc;
-  sbVars[sb_name].backgroundColor = new vscode.ThemeColor(color);
-  sbVars[sb_name].show();
 }
 
 // vscode helpers
 function infoMsg(vscode, msg, counter = '') {
-  countStatusBarItem(vscode, counter);
+  // if (!sbVars.hasOwnProperty('sb_name')) {
+  //   sbVars['sb_name'] = vscode.window.createStatusBarItem(
+  //     vscode.StatusBarAlignment.Left
+  //   );
+  //   sbVars['sb_name'].text = `$(files) ${sbVarscounter}`;
+  //   sbVars['sb_name'].tooltip = 'Letters count';
+  //   sbVars['sb_name'].backgroundColor = new vscode.ThemeColor(
+  //     'statusBarItem.errorBackground'
+  //   );
+  //   sbVars['sb_name'].show();
+  // }
+  // if (sbVars.hasOwnProperty('sb_name')) {
+  //   sbVarscounter += 1;
+  //   sbVars['sb_name'].text = `$(files) ${sbVarscounter}`;
+  //   sbVars['sb_name'].show();
+  //   // context.globalState.update(sb_name, sb_name_val);
+  // }
+  //  else {
+  //   var temp_sbitem = sbVars[sb_name];
+  //   // console.log(temp_sbitem);
+  //   temp_sbitem.text = `$(files) ${count_numb}`;
+  //   temp_sbitem.tooltip = 'Letters count';
+  //   temp_sbitem.backgroundColor = new vscode.ThemeColor(color);
+  //   temp_sbitem.show();
+  // }
+  // const parameters = [...arguments];
+
+  // parameters.forEach((param, index) => {
+  //   console.log('Parameter ' + (index + 1) + ': ' + param);
+  // });
+  console.log(countStatusBarItem(vscode, counter));
   vscode.window.showInformationMessage(msg);
 }
-function warnMsg(vscode, msg, counter = '') {
-  countStatusBarItem(vscode, counter);
+function warnMsg(msg) {
+  // sbVars['sb_name'] = 1;
+  // console.log(sbVars);
+  // countStatusBarItem(counter);
   vscode.window.showWarningMessage(msg);
 }

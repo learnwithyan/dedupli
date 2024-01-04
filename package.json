@@ -16,21 +16,33 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:dedupli.remDuplicates",
-    "onCommand:dedupli.shuffle"
+    "onStartupFinished"
   ],
   "main": "./extension",
   "contributes": {
     "commands": [
       {
         "command": "dedupli.remDuplicates",
-        "title": "DeDupli - remove duplicates from selected"
+        "title": "DeDupli - remove duplicates from selected",
+        "icon": "$(sort-precedence)"
       },
       {
         "command": "dedupli.shuffle",
-        "title": "DeDupli - shuffle lines from selected"
+        "title": "DeDupli - shuffle lines from selected",
+        "icon": "$(source-control)"
       }
     ]
+  },
+  "configuration": {
+    "title": "Dedupli Configarations",
+    "properties": {
+      "dedupli.lineBreak": {
+        "type": "string",
+        "default": "\n",
+        "scope": "resource",
+        "description": "Description of your setting"
+      }
+    }
   },
   "repository": {
     "type": "git",
