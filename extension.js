@@ -29,13 +29,13 @@ function activate(context) {
 
   //get all nls files
   // console.log(getNlsFile(vscode, language));
-  // var lnsFileJSON = getNlsFile(vscode, language);
-  // const commandTitle = lnsFile['dedupli.remDuplicates'];
+  var lnsFileJSON = getNlsFile(vscode, language);
+  const commandTitle = lnsFileJSON['dedupli.remDuplicates'];
 
   var disposableremDuplicates = vscode.commands.registerCommand(
     'dedupli.remDuplicates',
     function () {
-      // vscode.window.showInformationMessage(commandTitle);
+      vscode.window.showInformationMessage(commandTitle);
 
       var editor = vscode.window.activeTextEditor;
       if (!editor) {
@@ -264,11 +264,8 @@ function getNlsFile(vscode, languageCode) {
     if (matchingFile.includes(languageCode)) {
       try {
         // Read the content of the matching file as JSON
-        console.log(path.join(__dirname, matchingFile));
-        var content = fs.readFileSync(
-          path.join(__dirname, matchingFile),
-          'utf8'
-        );
+        var pathnls = path.join(__dirname, '/', matchingFile);
+        var content = fs.readFileSync(pathnls, 'utf8');
         const jsonContent = JSON.parse(content);
         return jsonContent;
       } catch (error) {
