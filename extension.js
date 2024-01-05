@@ -7,6 +7,8 @@ const path = require('path');
 var extId = 'learnwithyan.dedupli';
 //for localization commands
 // var localizeCmds = require('vscode-nls').loadMessageBundle();
+// const nls = require('vscode-nls');
+// const localizeVars = nls.loadMessageBundle();
 var localizeVars = require('vscode-nls').loadMessageBundle();
 
 //path of ext
@@ -27,15 +29,13 @@ function activate(context) {
 
   //get all nls files
   // console.log(getNlsFile(vscode, language));
-  var lnsFileJSON = getNlsFile(vscode, language);
-  // console.log(lnsFileJSON);
-
-  const commandTitle = lnsFile['dedupli.remDuplicates'];
+  // var lnsFileJSON = getNlsFile(vscode, language);
+  // const commandTitle = lnsFile['dedupli.remDuplicates'];
 
   var disposableremDuplicates = vscode.commands.registerCommand(
     'dedupli.remDuplicates',
     function () {
-      vscode.window.showInformationMessage(commandTitle);
+      // vscode.window.showInformationMessage(commandTitle);
 
       var editor = vscode.window.activeTextEditor;
       if (!editor) {
@@ -161,7 +161,6 @@ function countStatusBarItem(vscode, counter) {
       duplicate_counter = counter[key].length;
     }
   }
-
   const distinctLinesCounter =
     localizeVars.translations['distinctLinesCounter'];
   const duplicatedLinesCounter =
