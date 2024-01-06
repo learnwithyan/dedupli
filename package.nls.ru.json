@@ -1,4 +1,4 @@
 {
-  "extension.remDuplicates.title": "DeDupli - удалить дубликаты из выделенного текста",
-  "extension.shuffle.title": "DeDupli - рандомно перемешать строки"
+  "dedupli.remDuplicates.title": "DeDupli - удалить дубликаты из выделенного текста",
+  "dedupli.shuffle.title": "DeDupli - рандомно перемешать строки"
 }

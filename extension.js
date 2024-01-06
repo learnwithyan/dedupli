@@ -15,7 +15,7 @@ var localizeVars = require('vscode-nls').loadMessageBundle();
 
 //path of ext
 var extensionPath = vscode.extensions.getExtension(extId).extensionPath;
-
+console.log(extensionPath);
 //to store sb items
 var sbVars = {};
 
@@ -23,13 +23,14 @@ function activate(context) {
   //get user lng
   var language = vscode.env.language;
   console.log(language);
+
   // const localizeExtension = localize('dedupli.remDuplicates');
   // console.log(localizeExtension);
   //get user lng json for variables
   localizeVars.translations = require(`./translations/${language}/${language}.json`);
 
   //trnsl readme file but not automatically it open a window just
-  // trnslReadme(vscode, language);
+  trnslReadme(vscode, language);
 
   //get all nls files
   var lnsFileJSON = getNlsFile(vscode, language);
@@ -268,9 +269,7 @@ function getNlsFile(vscode, languageCode) {
       try {
         // Read the content of the matching file as JSON
         var pathnls = path.join(__dirname, '/', matchingFile);
-        var content = fs.readFileSync(pathnls, 'utf8');
-        const jsonContent = JSON.parse(content);
-        return jsonContent;
+        return pathnls;
       } catch (error) {
         console.error(
           `Error reading or parsing ${matchingFile} as JSON:`,

@@ -22,13 +22,13 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.remDuplicates",
-        "title": "%extension.remDuplicates.title%",
+        "command": "dedupli.remDuplicates",
+        "title": "%dedupli.remDuplicates.title%",
         "icon": "$(sort-precedence)"
       },
       {
-        "command": "extension.shuffle",
-        "title": "%extension.shuffle.title%",
+        "command": "dedupli.shuffle",
+        "title": "%dedupli.shuffle.title%",
         "icon": "$(source-control)"
       }
     ]
@@ -54,6 +54,7 @@
     "url": "https://github.com/learnwithyan/dedupli.git"
   },
   "dependencies": {
+    "marked": "^11.1.1",
     "vscode-nls": "^5.2.0"
   }
 }
