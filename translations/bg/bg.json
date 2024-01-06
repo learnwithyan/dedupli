@@ -1,0 +1,5 @@
+{
+  "distinctLinesCounter": "Счетчик уникальных строк БГ",
+  "duplicatedLinesCounter": "Счетчик дублированных строк БГ",
+  "symbolsLinesCounter": "Счетчик всех символов БГ"
+}

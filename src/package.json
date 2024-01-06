@@ -1,0 +1,21 @@
+{
+  "name": "my-extension-i18n",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "publisher": "learnwithyan",
+  "contributes": {
+    "i18n": [
+      {
+        "path": "./",
+        "languages": [
+          {
+            "id": "bg-BG",
+            "strings": "./package.bg-BG.nls.json"
+          }
+        ]
+      }
+    ]
+  }
+}

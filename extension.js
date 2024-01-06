@@ -3,6 +3,8 @@ var vscode = require('vscode');
 const fs = require('fs');
 const path = require('path');
 
+const { localize } = require('vscode-nls');
+
 //extId
 var extId = 'learnwithyan.dedupli';
 //for localization commands
@@ -20,7 +22,9 @@ var sbVars = {};
 function activate(context) {
   //get user lng
   var language = vscode.env.language;
-
+  console.log(language);
+  // const localizeExtension = localize('dedupli.remDuplicates');
+  // console.log(localizeExtension);
   //get user lng json for variables
   localizeVars.translations = require(`./translations/${language}/${language}.json`);
 
@@ -28,14 +32,13 @@ function activate(context) {
   // trnslReadme(vscode, language);
 
   //get all nls files
-  // console.log(getNlsFile(vscode, language));
   var lnsFileJSON = getNlsFile(vscode, language);
-  const commandTitle = lnsFileJSON['dedupli.remDuplicates'];
+  const remDuplicatesCmd = lnsFileJSON['dedupli.remDuplicates'];
 
   var disposableremDuplicates = vscode.commands.registerCommand(
     'dedupli.remDuplicates',
     function () {
-      vscode.window.showInformationMessage(commandTitle);
+      vscode.window.showInformationMessage(remDuplicatesCmd);
 
       var editor = vscode.window.activeTextEditor;
       if (!editor) {
