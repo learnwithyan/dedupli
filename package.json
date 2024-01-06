@@ -22,13 +22,13 @@
   "contributes": {
     "commands": [
       {
-        "command": "dedupli.remDuplicates",
-        "title": "%dedupli.remDuplicates%",
+        "command": "extension.remDuplicates",
+        "title": "%extension.remDuplicates.title%",
         "icon": "$(sort-precedence)"
       },
       {
-        "command": "dedupli.shuffle",
-        "title": "%dedupli.shuffle%",
+        "command": "extension.shuffle",
+        "title": "%extension.shuffle.title%",
         "icon": "$(source-control)"
       }
     ]
