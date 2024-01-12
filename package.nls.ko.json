@@ -2,3 +2,5 @@
   "dedupli.remDuplicates.title": "DeDupli - remove duplicates from selected text",
   "dedupli.shuffle.title": "DeDupli - random lines from selected text"
 }
+DeDupli - 선택한 텍스트에서 중복된 항목을 제거합니다.
+DeDupli - 선택한 텍스트에서 임의의 줄
