@@ -1,8 +1,23 @@
-# DeDupli
+# Title
 
-Retain distinct lines of text, eliminating any duplicates from the current selection. Additionally, implement a command for randomizing the order of the presently selected lines.
+titletext
 
-## Commands
+## Description0
 
-- DeDupli - remove duplicates from selected
-- DeDupli - shuffle lines from selected
+| Left columns | Right columns |
+| ------------ | :-----------: |
+| left foo     |   right foo   |
+| left bar     |   right bar   |
+| left baz     |   right baz   |
+
+## Description1
+
+Description1text **This text will be bold**, **This will also be bold**
+
+## Description22
+
+- Description1text1
+- Description1text2
+- Description1text3
+
+#

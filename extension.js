@@ -228,6 +228,17 @@ function trnslReadme(vscode, language) {
     // Fallback to the default README.md if translation not available
     readmeContent = fs.readFileSync(defaultPath, 'utf8');
   }
+  //convert text to html
+  readmeContentObj = markdownToObject(readmeContent);
+
+  let htmlCode = '<div>';
+  const entries = Object.entries(readmeContentObj.texts);
+  entries.forEach(([key, value]) => {
+    console.log(key, value); // Output: key1 value1, key2 value2, key3 value3
+    htmlCode = htmlCode + '<h3>' + key + '</h3>' + '<p>' + value + '</p>';
+  });
+  htmlCode = htmlCode + '</div>';
+  console.log(htmlCode);
   //update readme
   const panel = vscode.window.createWebviewPanel(
     'translatedReadme',
@@ -242,7 +253,7 @@ function trnslReadme(vscode, language) {
   // Replace a placeholder in the HTML content with the dynamic value
   const finalHtml = htmlContent
     .toString()
-    .replace('{{translatedReadme}}', readmeContent);
+    .replace('{{translatedReadme}}', htmlCode);
 
   // Set the HTML content in the webview panel
   panel.webview.html = finalHtml;
@@ -269,4 +280,64 @@ function getNlsFile(vscode, languageCode) {
     }
   }
   return null; // If no matching file is found
+}
+
+//read markdown text
+function markdownToObject(markdownText) {
+  const regexblocks = /#(.*?)#/gs;
+  const matches = markdownText.match(regexblocks);
+  /* console.log(matches); */
+  const regexHash = /(#[\s\S]*?)(#)/;
+
+  //check for regular text we used first symbol as "- "
+  const regexchecktext = /#(.+?)\n\n((?![\-|]).*)/;
+  const regexgettext = /#(.+?)\n\n((?![\-|]).*)/;
+
+  //check for list we used first symbol as "- "
+  const regexchecklist = /#.+?\n\n*?- /;
+  const regexgetlist = /# (.+?)\n\n([\s\S]+?)#/;
+  //check for table (not used) we used first symbol as "|"
+  const regexchecktable = /#.+?\n\n*?\|/;
+  const regexgettable = /# (.+?)\n\n([\s\S]+?)#/;
+
+  let obj = {};
+
+  if (matches) {
+    matches.forEach((match) => {
+      //let block = match.trim().replace(regexHash, '$1');
+      let block = match.trim();
+      // console.log(regexchecktext.test(block));
+      if (regexchecklist.test(block) === true) {
+        const matchlist = block.match(regexgetlist);
+        const matchlistTitle = matchlist[1].trim();
+        const matchlistArr = matchlist[2]
+          .split('\n- ')
+          .map((line) => line.replace('- ', '').trim());
+        if (obj.hasOwnProperty('lists')) {
+          obj.lists[matchlistTitle] = '<p>' + matchlistArr + '</p>';
+        } else {
+          obj.lists = [];
+          obj.lists[matchlistTitle] = '<p>' + matchlistArr + '</p>';
+        }
+        // console.log(matchlistTitle);
+        // console.log(matchlistArr);
+      }
+      if (regexchecktext.test(block) === true) {
+        const matchtext = block.match(regexgettext);
+        const matchtextTitle = matchtext[1].trim();
+        const matchtextArr = matchtext[2].trim();
+        if (obj.hasOwnProperty('texts')) {
+          obj.texts[matchtextTitle] = '<p>' + matchtextArr + '</p>';
+        } else {
+          obj.texts = [];
+          obj.texts[matchtextTitle] = '<p>' + matchtextArr + '</p>';
+        }
+      }
+      // if (regexchecktable.test(block) === true) {
+      //   const matchtable = block.match(regexgettable);
+      //   // console.log(matchtable);
+      // }
+    });
+    return obj;
+  }
 }

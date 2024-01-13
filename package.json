@@ -35,8 +35,19 @@
   },
   "localize": [
     "package.nls.json",
+    "package.bg.nls.json",
+    "package.cs.nls.json",
+    "package.de.nls.json",
+    "package.es.nls.json",
+    "package.fr.nls.json",
+    "package.hu.nls.json",
+    "package.it.nls.json",
+    "package.ko.nls.json",
+    "package.pl.nls.json",
+    "package.pt.nls.json",
     "package.ru.nls.json",
-    "package.bg.nls.json"
+    "package.tr.nls.json",
+    "package.zh.nls.json"
   ],
   "configuration": {
     "title": "Dedupli Configarations",

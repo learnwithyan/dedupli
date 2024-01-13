@@ -1,8 +1,23 @@
-# Dedupli
+# Title
 
-Сохраняйте уникальные строки текста, исключая любые дубликаты из текущего выделения. Кроме того, попробуйте команду для рандомизации порядка выбранных в данный момент строк.
+тайтл
 
-## Команды
+## Description0
 
-- DeDupli - удалить дубликаты из выбранных
-- DeDupli - перемешивание строк из выбранных
+| Left columns | Right columns |
+| ------------ | :-----------: |
+| left foo     |   right foo   |
+| left bar     |   right bar   |
+| left baz     |   right baz   |
+
+## Description1
+
+просто опис
+
+## Description22
+
+- Description1text1
+- Description1text2
+- Description1text3
+
+#

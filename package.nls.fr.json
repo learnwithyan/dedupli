@@ -1,6 +1,4 @@
 {
-  "dedupli.remDuplicates.title": "DeDupli - remove duplicates from selected text",
-  "dedupli.shuffle.title": "DeDupli - random lines from selected text"
+  "dedupli.remDuplicates.title": "DeDupli - supprime les doublons du texte sélectionné",
+  "dedupli.shuffle.title": "DeDupli - lignes aléatoires du texte sélectionné"
 }
-DeDupli - supprime les doublons du texte sélectionné
-DeDupli - lignes aléatoires du texte sélectionné
