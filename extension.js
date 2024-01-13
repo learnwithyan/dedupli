@@ -230,13 +230,37 @@ function trnslReadme(vscode, language) {
   }
   //convert text to html
   readmeContentObj = markdownToObject(readmeContent);
-
+  // console.log(readmeContentObj.lists);
   let htmlCode = '<div>';
-  const entries = Object.entries(readmeContentObj.texts);
-  entries.forEach(([key, value]) => {
-    console.log(key, value); // Output: key1 value1, key2 value2, key3 value3
+  //read texts
+  const entriesText = Object.entries(readmeContentObj.texts);
+  entriesText.forEach(([key, value]) => {
+    // console.log(key, value); // Output: key1 value1, key2 value2, key3 value3
     htmlCode = htmlCode + '<h3>' + key + '</h3>' + '<p>' + value + '</p>';
   });
+  //add demo image
+  // htmlCode =
+  //   htmlCode + '<img src="' + `./translations/${language}/demo.png` + '">';
+  // console.log(`./translations/${language}/demo.png`);
+  const mediaPath = vscode.Uri.file(
+    // path.join(context.extensionPath, 'translations', 'ru')
+    path.join(__dirname, '/translations/', language)
+  ).with({ scheme: 'vscode-resource' });
+
+  // Construct the URI for the image
+  const imageUrl = mediaPath.with({
+    path: path.join(mediaPath.path, '/demo.png'),
+  });
+  console.log(imageUrl);
+  htmlCode = htmlCode + '<img src="' + imageUrl + '">';
+
+  // read lists
+  const entriesList = Object.entries(readmeContentObj.lists);
+  entriesList.forEach(([key, value]) => {
+    // console.log(key, value); // Output: key1 value1, key2 value2, key3 value3
+    htmlCode = htmlCode + '<h3>' + key + '</h3>' + '<ul>' + value + '</ul>';
+  });
+
   htmlCode = htmlCode + '</div>';
   console.log(htmlCode);
   //update readme
@@ -310,17 +334,14 @@ function markdownToObject(markdownText) {
       if (regexchecklist.test(block) === true) {
         const matchlist = block.match(regexgetlist);
         const matchlistTitle = matchlist[1].trim();
-        const matchlistArr = matchlist[2]
-          .split('\n- ')
-          .map((line) => line.replace('- ', '').trim());
-        if (obj.hasOwnProperty('lists')) {
-          obj.lists[matchlistTitle] = '<p>' + matchlistArr + '</p>';
-        } else {
-          obj.lists = [];
-          obj.lists[matchlistTitle] = '<p>' + matchlistArr + '</p>';
-        }
+        const matchlistArr = matchlist[2].split('\n- ').map((line) => {
+          line = line.replace('- ', '').trim();
+          return '<li>' + line.replace(',') + '</li>';
+        });
+        obj.lists = [];
+        obj.lists[matchlistTitle] = matchlistArr.join(' ');
         // console.log(matchlistTitle);
-        // console.log(matchlistArr);
+        console.log(matchlistArr);
       }
       if (regexchecktext.test(block) === true) {
         const matchtext = block.match(regexgettext);
