@@ -5,10 +5,6 @@ const path = require('path');
 
 //extId
 var extId = 'learnwithyan.dedupli';
-//for localization commands
-// var localizeCmds = require('vscode-nls').loadMessageBundle();
-// const nls = require('vscode-nls');
-// const localizeVars = nls.loadMessageBundle();
 var localizeVars = require('vscode-nls').loadMessageBundle();
 
 //path of ext
@@ -256,19 +252,20 @@ function trnslReadme(vscode, language) {
 function getNlsFile(vscode, languageCode) {
   const localizeCmds =
     vscode.extensions.getExtension(extId).packageJSON.localize;
-
   for (const matchingFile of localizeCmds) {
-    if (matchingFile.includes(languageCode)) {
-      try {
+    try {
+      if (matchingFile.includes(languageCode)) {
         // Read the content of the matching file as JSON
         var pathnls = path.join(__dirname, '/', matchingFile);
-        return pathnls;
-      } catch (error) {
-        console.error(
-          `Error reading or parsing ${matchingFile} as JSON:`,
-          error.message
-        );
+      } else {
+        var pathnls = path.join(__dirname, '/', 'package.nls.json');
       }
+      return pathnls;
+    } catch (error) {
+      console.error(
+        `Error reading or parsing ${matchingFile} as JSON:`,
+        error.message
+      );
     }
   }
   return null; // If no matching file is found
