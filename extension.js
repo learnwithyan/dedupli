@@ -3,8 +3,6 @@ var vscode = require('vscode');
 const fs = require('fs');
 const path = require('path');
 
-const { localize } = require('vscode-nls');
-
 //extId
 var extId = 'learnwithyan.dedupli';
 //for localization commands
