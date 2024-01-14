@@ -16,7 +16,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onStartupFinished"
+    "onCommand"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -29,6 +29,11 @@
       {
         "command": "dedupli.shuffle",
         "title": "%dedupli.shuffle.title%",
+        "icon": "$(source-control)"
+      },
+      {
+        "command": "dedupli.showTranslReadme",
+        "title": "%dedupli.showTranslReadme.title%",
         "icon": "$(source-control)"
       }
     ]

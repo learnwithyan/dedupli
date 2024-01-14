@@ -4,6 +4,7 @@ const path = require('path');
 
 //extId
 var extId = 'learnwithyan.dedupli';
+//load lib to transl bar items
 var localizeVars = require('vscode-nls').loadMessageBundle();
 
 //path of ext
@@ -19,17 +20,88 @@ function activate(context) {
   localizeVars.translations = require(`./translations/${language}/${language}.json`);
 
   //trnsl readme file but not automatically it open a window just
-  trnslReadme(vscode, language);
 
   //get all nls files
-  var lnsFileJSON = getNlsFile(vscode, language);
-  const remDuplicatesCmd = lnsFileJSON['dedupli.remDuplicates'];
+  // var lnsFileJSON = getNlsFile(vscode, language);
 
+  //translate readme
+  var disposableTranslatedReadme = vscode.commands.registerCommand(
+    'dedupli.showTranslReadme',
+    // trnslReadme(vscode, language)
+    function () {
+      const translationsPath = path.join(
+        extensionPath,
+        'translations',
+        language,
+        'README.md'
+      );
+      const defaultPath = path.join(extensionPath, 'README.md');
+      let readmeContent;
+      try {
+        readmeContent = fs.readFileSync(translationsPath, 'utf8');
+      } catch (error) {
+        readmeContent = fs.readFileSync(defaultPath, 'utf8');
+      }
+      //convert text to html
+      readmeContentObj = markdownToObject(readmeContent);
+      let htmlCode = '<div id="main">';
+      //read texts
+      const entriesText = Object.entries(readmeContentObj.texts);
+      entriesText.forEach(function ([key, value], i) {
+        if (i == 0) {
+          htmlCode = htmlCode + key + value;
+        } else if (i > 0) {
+          htmlCode = htmlCode + key + value;
+        }
+        return htmlCode;
+      });
+      //add demo image
+      // htmlCode =
+      //   htmlCode + '<img src="' + `./translations/${language}/demo.png` + '">';
+      const mediaPath = vscode.Uri.file(
+        // path.join(context.extensionPath, 'translations', 'ru')
+        path.join(__dirname, '/translations')
+      ).with({ scheme: 'vscode-resource' });
+      // Construct the URI for the image
+      const imageUrl = mediaPath.with({
+        path: path.join(mediaPath.path, '/demo.gif'),
+      });
+      htmlCode =
+        htmlCode + '<img style="width: 640px;" src="' + imageUrl + '">';
+      //read video
+      // htmlCode =
+      //   htmlCode +
+      //   '	<video width="640" height="360" controls><source src="' +
+      //   imageUrl +
+      //   '" type="video/mp4"></video>';
+      // read lists
+      const entriesList = Object.entries(readmeContentObj.lists);
+      entriesList.forEach(([key, value]) => {
+        // console.log(key, value); // Output: key1 value1, key2 value2, key3 value3
+        htmlCode = htmlCode + key + value;
+      });
+      htmlCode = htmlCode + '</div>';
+      //update readme
+      const panel = vscode.window.createWebviewPanel(
+        'translatedReadme',
+        'Translated README',
+        vscode.ViewColumn.One,
+        { enableScripts: true, retainContextWhenHidden: true }
+      );
+      const htmlContent = fs.readFileSync(
+        path.join(__dirname, '/translations/translreadme.html')
+      );
+      // Replace a placeholder in the HTML content with the dynamic value
+      const finalHtml = htmlContent
+        .toString()
+        .replace('{{translatedReadme}}', htmlCode);
+      // Set the HTML content in the webview panel
+      panel.webview.html = finalHtml;
+    }
+  );
   var disposableremDuplicates = vscode.commands.registerCommand(
     'dedupli.remDuplicates',
     function () {
-      vscode.window.showInformationMessage(remDuplicatesCmd);
-
       var editor = vscode.window.activeTextEditor;
       if (!editor) {
         return;
@@ -110,6 +182,7 @@ function activate(context) {
     }
   );
 
+  context.subscriptions.push(disposableTranslatedReadme);
   context.subscriptions.push(disposableremDuplicates);
   context.subscriptions.push(disposableShuffle);
 }
@@ -154,6 +227,7 @@ function countStatusBarItem(vscode, counter) {
       duplicate_counter = counter[key].length;
     }
   }
+  //translate bar items
   const distinctLinesCounter =
     localizeVars.translations['distinctLinesCounter'];
   const duplicatedLinesCounter =
@@ -208,84 +282,6 @@ function infoMsg(vscode, msg, counter = '') {
 function warnMsg(vscode, msg, counter = '') {
   countStatusBarItem(vscode, counter);
   vscode.window.showWarningMessage(msg);
-}
-//translate readme
-function trnslReadme(vscode, language) {
-  const translationsPath = path.join(
-    extensionPath,
-    'translations',
-    language,
-    'README.md'
-  );
-  const defaultPath = path.join(extensionPath, 'README.md');
-
-  let readmeContent;
-
-  try {
-    readmeContent = fs.readFileSync(translationsPath, 'utf8');
-  } catch (error) {
-    readmeContent = fs.readFileSync(defaultPath, 'utf8');
-  }
-  //convert text to html
-  readmeContentObj = markdownToObject(readmeContent);
-  let htmlCode = '<div id="main">';
-  //read texts
-  const entriesText = Object.entries(readmeContentObj.texts);
-  entriesText.forEach(function ([key, value], i) {
-    if (i == 0) {
-      htmlCode = htmlCode + key + value;
-    } else if (i > 0) {
-      htmlCode = htmlCode + key + value;
-    }
-    return htmlCode;
-  });
-  //add demo image
-  // htmlCode =
-  //   htmlCode + '<img src="' + `./translations/${language}/demo.png` + '">';
-  const mediaPath = vscode.Uri.file(
-    // path.join(context.extensionPath, 'translations', 'ru')
-    path.join(__dirname, '/translations')
-  ).with({ scheme: 'vscode-resource' });
-
-  // Construct the URI for the image
-  const imageUrl = mediaPath.with({
-    path: path.join(mediaPath.path, '/demo.gif'),
-  });
-  htmlCode = htmlCode + '<img style="width: 640px;" src="' + imageUrl + '">';
-
-  //read video
-  // htmlCode =
-  //   htmlCode +
-  //   '	<video width="640" height="360" controls><source src="' +
-  //   imageUrl +
-  //   '" type="video/mp4"></video>';
-
-  // read lists
-  const entriesList = Object.entries(readmeContentObj.lists);
-  entriesList.forEach(([key, value]) => {
-    // console.log(key, value); // Output: key1 value1, key2 value2, key3 value3
-    htmlCode = htmlCode + key + value;
-  });
-
-  htmlCode = htmlCode + '</div>';
-  //update readme
-  const panel = vscode.window.createWebviewPanel(
-    'translatedReadme',
-    'Translated README',
-    vscode.ViewColumn.One,
-    { enableScripts: true, retainContextWhenHidden: true }
-  );
-  const htmlContent = fs.readFileSync(
-    path.join(__dirname, '/translations/translreadme.html')
-  );
-
-  // Replace a placeholder in the HTML content with the dynamic value
-  const finalHtml = htmlContent
-    .toString()
-    .replace('{{translatedReadme}}', htmlCode);
-
-  // Set the HTML content in the webview panel
-  panel.webview.html = finalHtml;
 }
 
 //get LNS
