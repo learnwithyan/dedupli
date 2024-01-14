@@ -1,5 +1,5 @@
 {
-  "distinctLinesCounter": "Счетчик уникальных строк БГ",
-  "duplicatedLinesCounter": "Счетчик дублированных строк БГ",
-  "symbolsLinesCounter": "Счетчик всех символов БГ"
+  "distinctLinesCounter": "Почти за разпределителни редове",
+  "duplicatedLinesCounter": "Дубликат на дублирани редове",
+  "symbolsLinesCounter": "Показване на символ"
 }

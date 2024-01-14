@@ -1,4 +1,3 @@
-// import * as vscode from 'vscode';
 var vscode = require('vscode');
 const fs = require('fs');
 const path = require('path');
@@ -33,7 +32,7 @@ function activate(context) {
 
       var editor = vscode.window.activeTextEditor;
       if (!editor) {
-        return; // No open text editor
+        return;
       }
 
       var selection = editor.selection;
@@ -87,7 +86,7 @@ function activate(context) {
     function () {
       var editor = vscode.window.activeTextEditor;
       if (!editor) {
-        return; // No open text editor
+        return;
       }
 
       var selection = editor.selection;
@@ -225,44 +224,50 @@ function trnslReadme(vscode, language) {
   try {
     readmeContent = fs.readFileSync(translationsPath, 'utf8');
   } catch (error) {
-    // Fallback to the default README.md if translation not available
     readmeContent = fs.readFileSync(defaultPath, 'utf8');
   }
   //convert text to html
   readmeContentObj = markdownToObject(readmeContent);
-  // console.log(readmeContentObj.lists);
-  let htmlCode = '<div>';
+  let htmlCode = '<div id="main">';
   //read texts
   const entriesText = Object.entries(readmeContentObj.texts);
-  entriesText.forEach(([key, value]) => {
-    // console.log(key, value); // Output: key1 value1, key2 value2, key3 value3
-    htmlCode = htmlCode + '<h3>' + key + '</h3>' + '<p>' + value + '</p>';
+  entriesText.forEach(function ([key, value], i) {
+    if (i == 0) {
+      htmlCode = htmlCode + key + value;
+    } else if (i > 0) {
+      htmlCode = htmlCode + key + value;
+    }
+    return htmlCode;
   });
   //add demo image
   // htmlCode =
   //   htmlCode + '<img src="' + `./translations/${language}/demo.png` + '">';
-  // console.log(`./translations/${language}/demo.png`);
   const mediaPath = vscode.Uri.file(
     // path.join(context.extensionPath, 'translations', 'ru')
-    path.join(__dirname, '/translations/', language)
+    path.join(__dirname, '/translations')
   ).with({ scheme: 'vscode-resource' });
 
   // Construct the URI for the image
   const imageUrl = mediaPath.with({
-    path: path.join(mediaPath.path, '/demo.png'),
+    path: path.join(mediaPath.path, '/demo.gif'),
   });
-  console.log(imageUrl);
-  htmlCode = htmlCode + '<img src="' + imageUrl + '">';
+  htmlCode = htmlCode + '<img style="width: 640px;" src="' + imageUrl + '">';
+
+  //read video
+  // htmlCode =
+  //   htmlCode +
+  //   '	<video width="640" height="360" controls><source src="' +
+  //   imageUrl +
+  //   '" type="video/mp4"></video>';
 
   // read lists
   const entriesList = Object.entries(readmeContentObj.lists);
   entriesList.forEach(([key, value]) => {
     // console.log(key, value); // Output: key1 value1, key2 value2, key3 value3
-    htmlCode = htmlCode + '<h3>' + key + '</h3>' + '<ul>' + value + '</ul>';
+    htmlCode = htmlCode + key + value;
   });
 
   htmlCode = htmlCode + '</div>';
-  console.log(htmlCode);
   //update readme
   const panel = vscode.window.createWebviewPanel(
     'translatedReadme',
@@ -310,8 +315,6 @@ function getNlsFile(vscode, languageCode) {
 function markdownToObject(markdownText) {
   const regexblocks = /#(.*?)#/gs;
   const matches = markdownText.match(regexblocks);
-  /* console.log(matches); */
-  const regexHash = /(#[\s\S]*?)(#)/;
 
   //check for regular text we used first symbol as "- "
   const regexchecktext = /#(.+?)\n\n((?![\-|]).*)/;
@@ -328,9 +331,7 @@ function markdownToObject(markdownText) {
 
   if (matches) {
     matches.forEach((match) => {
-      //let block = match.trim().replace(regexHash, '$1');
       let block = match.trim();
-      // console.log(regexchecktext.test(block));
       if (regexchecklist.test(block) === true) {
         const matchlist = block.match(regexgetlist);
         const matchlistTitle = matchlist[1].trim();
@@ -339,21 +340,23 @@ function markdownToObject(markdownText) {
           return '<li>' + line.replace(',') + '</li>';
         });
         obj.lists = [];
-        obj.lists[matchlistTitle] = matchlistArr.join(' ');
-        // console.log(matchlistTitle);
-        console.log(matchlistArr);
+        obj.lists['<h3>' + matchlistTitle + '</h3>'] =
+          '<ul>' + matchlistArr.join(' ') + '</ul>';
       }
       if (regexchecktext.test(block) === true) {
         const matchtext = block.match(regexgettext);
         const matchtextTitle = matchtext[1].trim();
         const matchtextArr = matchtext[2].trim();
         if (obj.hasOwnProperty('texts')) {
-          obj.texts[matchtextTitle] = '<p>' + matchtextArr + '</p>';
+          obj.texts['<h2>' + matchtextTitle + '</h2>'] =
+            '<p>' + matchtextArr + '</p>';
         } else {
           obj.texts = [];
-          obj.texts[matchtextTitle] = '<p>' + matchtextArr + '</p>';
+          obj.texts['<h1>' + matchtextTitle + '</h1>'] =
+            '<p>' + matchtextArr + '</p>';
         }
       }
+      //work with table
       // if (regexchecktable.test(block) === true) {
       //   const matchtable = block.match(regexgettable);
       //   // console.log(matchtable);

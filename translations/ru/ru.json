@@ -1,6 +1,5 @@
 {
   "distinctLinesCounter": "Счетчик уникальных строк",
   "duplicatedLinesCounter": "Счетчик дублированных строк",
-  "symbolsLinesCounter": "Счетчик всех символов",
-  "helloWorld": "Hello, World!"
+  "symbolsLinesCounter": "Счетчик всех символов"
 }

@@ -1,23 +1,18 @@
-# Title
+# DeDupli
 
-titletext
+Retain distinct lines of text, eliminating any duplicates from the current selection. Additionally, implement a command for randomizing the order of the presently selected lines.
 
-## Description0
+##
 
-| Left columns | Right columns |
-| ------------ | :-----------: |
-| left foo     |   right foo   |
-| left bar     |   right bar   |
-| left baz     |   right baz   |
+[![Vscode extension](/translations/demo.gif 'Vscode extension demo')](https://learnwithyan.com)
 
-## Description1
+## How to use?
 
-Description1text **This text will be bold**, **This will also be bold**
+This extension works with selected text only. First you need to select all text. Second press F1 and in menu type "Dedupli". Third you can choose one of commands you need.
 
-## Description22
+## What commands you can use?
 
-- Description1text1
-- Description1text2
-- Description1text3
+- DeDupli - remove duplicates from selected
+- DeDupli - shuffle lines from selected
 
 #
