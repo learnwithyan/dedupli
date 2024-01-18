@@ -1,5 +1,7 @@
 {
   "dedupli.remDuplicates.title": "DeDupli - távolítsa el a másolatokat a kijelölt szövegből",
   "dedupli.shuffle.title": "DeDupli - véletlenszerű sorok a kiválasztott szövegből",
+  "dedupli.base64.title": "DeDupli - konvertálja a listát base64-re",
+
   "dedupli.showTranslReadme.title": "DeDupli - a README fordítása"
 }

@@ -32,6 +32,11 @@
         "icon": "$(source-control)"
       },
       {
+        "command": "dedupli.base64",
+        "title": "%dedupli.base64.title%",
+        "icon": "$(source-control)"
+      },
+      {
         "command": "dedupli.showTranslReadme",
         "title": "%dedupli.showTranslReadme.title%",
         "icon": "$(source-control)"

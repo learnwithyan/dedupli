@@ -1,5 +1,7 @@
 {
   "dedupli.remDuplicates.title": "DeDupli - seçilen metindeki kopyaları kaldır",
   "dedupli.shuffle.title": "DeDupli - seçilen metinden rastgele çizgiler",
+  "dedupli.base64.title": "DeDupli - listeyi base64'e dönüştür",
+
   "dedupli.showTranslReadme.title": "DeDupli - çevrilmiş BENİOKU'yu göster"
 }

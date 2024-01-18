@@ -1,5 +1,7 @@
 {
   "dedupli.remDuplicates.title": "DeDupli - удалить дубликаты из выделенного текста",
   "dedupli.shuffle.title": "DeDupli - рандомно перемешать строки",
+  "dedupli.base64.title": "DeDupli - преобразовать список в base64",
+
   "dedupli.showTranslReadme.title": "DeDupli - показать переведенный README"
 }

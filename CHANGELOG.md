@@ -20,3 +20,9 @@ added 2 translations for commands
 - Russian
 
 cleaned the code
+
+### 2.1.1
+
+- added 15 translations
+- refactored the code
+- added convert list to base64

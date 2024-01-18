@@ -7,6 +7,9 @@ var extId = 'learnwithyan.dedupli';
 //load lib to transl bar items
 var localizeVars = require('vscode-nls').loadMessageBundle();
 
+//get interface lang
+var language = vscode.env.language;
+
 //path of ext
 var extensionPath = vscode.extensions.getExtension(extId).extensionPath;
 //to store sb items
@@ -14,7 +17,6 @@ var sbVars = {};
 
 function activate(context) {
   //get user lng
-  var language = vscode.env.language;
 
   //get user lng json for variables
   localizeVars.translations = require(`./translations/${language}/${language}.json`);
@@ -29,162 +31,38 @@ function activate(context) {
     'dedupli.showTranslReadme',
     // trnslReadme(vscode, language)
     function () {
-      const translationsPath = path.join(
-        extensionPath,
-        'translations',
-        language,
-        'README.md'
-      );
-      const defaultPath = path.join(extensionPath, 'README.md');
-      let readmeContent;
-      try {
-        readmeContent = fs.readFileSync(translationsPath, 'utf8');
-      } catch (error) {
-        readmeContent = fs.readFileSync(defaultPath, 'utf8');
-      }
-      //convert text to html
-      readmeContentObj = markdownToObject(readmeContent);
-      let htmlCode = '<div id="main">';
-      //read texts
-      const entriesText = Object.entries(readmeContentObj.texts);
-      entriesText.forEach(function ([key, value], i) {
-        if (i == 0) {
-          htmlCode = htmlCode + key + value;
-        } else if (i > 0) {
-          htmlCode = htmlCode + key + value;
-        }
-        return htmlCode;
-      });
-      //add demo image
-      // htmlCode =
-      //   htmlCode + '<img src="' + `./translations/${language}/demo.png` + '">';
-      const mediaPath = vscode.Uri.file(
-        // path.join(context.extensionPath, 'translations', 'ru')
-        path.join(__dirname, '/translations')
-      ).with({ scheme: 'vscode-resource' });
-      // Construct the URI for the image
-      const imageUrl = mediaPath.with({
-        path: path.join(mediaPath.path, '/demo.gif'),
-      });
-      htmlCode =
-        htmlCode + '<img style="width: 640px;" src="' + imageUrl + '">';
-      //read video
-      // htmlCode =
-      //   htmlCode +
-      //   '	<video width="640" height="360" controls><source src="' +
-      //   imageUrl +
-      //   '" type="video/mp4"></video>';
-      // read lists
-      const entriesList = Object.entries(readmeContentObj.lists);
-      entriesList.forEach(([key, value]) => {
-        // console.log(key, value); // Output: key1 value1, key2 value2, key3 value3
-        htmlCode = htmlCode + key + value;
-      });
-      htmlCode = htmlCode + '</div>';
-      //update readme
-      const panel = vscode.window.createWebviewPanel(
-        'translatedReadme',
-        'Translated README',
-        vscode.ViewColumn.One,
-        { enableScripts: true, retainContextWhenHidden: true }
-      );
-      const htmlContent = fs.readFileSync(
-        path.join(__dirname, '/translations/translreadme.html')
-      );
-      // Replace a placeholder in the HTML content with the dynamic value
-      const finalHtml = htmlContent
-        .toString()
-        .replace('{{translatedReadme}}', htmlCode);
-      // Set the HTML content in the webview panel
-      panel.webview.html = finalHtml;
+      trnslReadmeHandler();
     }
   );
+
+  //remove duplicates
   var disposableremDuplicates = vscode.commands.registerCommand(
     'dedupli.remDuplicates',
     function () {
-      var editor = vscode.window.activeTextEditor;
-      if (!editor) {
-        return;
-      }
-
-      var selection = editor.selection;
-      var text = editor.document.getText(selection);
-      var lines = text.split('\n');
-
-      var distinct_lines = [];
-      var duplicate_lines = [];
-
-      lines.forEach(function (el) {
-        if (distinct_lines.indexOf(el) === -1) {
-          distinct_lines.push(el);
-        } else {
-          duplicate_lines.push(el);
-        }
-      });
-
-      if (duplicate_lines.length > 0 && distinct_lines.length == 0) {
-        editor.edit(function (editBuilder) {
-          editBuilder.replace(selection, distinct_lines.join('\n'));
-        });
-        var counter = {
-          distinct: distinct_lines,
-          duplicate: duplicate_lines,
-        };
-        infoMsg(vscode, 'Duplicates removed', counter);
-        distinct_lines.length = 0;
-      } else if (distinct_lines.length > 0 && duplicate_lines.length == 0) {
-        var counter = {
-          distinct: distinct_lines,
-        };
-        warnMsg(vscode, 'List has not duplicates', counter);
-        duplicate_lines.length = 0;
-      } else if (duplicate_lines.length > 0 && distinct_lines.length > 0) {
-        editor.edit(function (editBuilder) {
-          editBuilder.replace(selection, distinct_lines.join('\n'));
-        });
-        var counter = {
-          distinct: distinct_lines,
-          duplicate: duplicate_lines,
-        };
-        infoMsg(vscode, 'Duplicates removed', counter);
-        distinct_lines.length = 0;
-        duplicate_lines.length = 0;
-      }
+      remDuplicatesHandler();
     }
   );
 
+  //shuffle lines
   var disposableShuffle = vscode.commands.registerCommand(
     'dedupli.shuffle',
     function () {
-      var editor = vscode.window.activeTextEditor;
-      if (!editor) {
-        return;
-      }
+      shuffleHandler();
+    }
+  );
 
-      var selection = editor.selection;
-      var text = editor.document.getText(selection);
-      var lines = text.split('\n');
-
-      if (lines[lines.length - 1] === '\n') {
-        lines.pop();
-      }
-
-      var random_lines = randomizeArrayOrder(lines);
-      if (typeof random_lines !== 'undefined' && random_lines.length > 0) {
-        editor.edit(function (editBuilder) {
-          editBuilder.replace(selection, random_lines.join('\n'));
-        });
-
-        infoMsg(vscode, 'Lines shuffled');
-      } else {
-        warnMsg(vscode, "List wasn't shuffled");
-      }
+  //shuffle lines
+  var disposableBase64 = vscode.commands.registerCommand(
+    'dedupli.base64',
+    function () {
+      base64Handler();
     }
   );
 
   context.subscriptions.push(disposableTranslatedReadme);
   context.subscriptions.push(disposableremDuplicates);
   context.subscriptions.push(disposableShuffle);
+  context.subscriptions.push(disposableBase64);
 }
 exports.activate = activate;
 
@@ -192,6 +70,175 @@ function deactivate() {}
 exports.deactivate = deactivate;
 
 // function helpers
+function base64Handler() {
+  var editor = vscode.window.activeTextEditor;
+  if (!editor) {
+    return;
+  }
+
+  var selection = editor.selection;
+  var text = editor.document.getText(selection);
+  var lines = text.split('\n');
+
+  if (lines[lines.length - 1] === '\n') {
+    lines.pop();
+  }
+
+  var base64_lines = base64ArrayOrder(lines);
+  if (typeof base64_lines !== 'undefined' && base64_lines.length > 0) {
+    editor.edit(function (editBuilder) {
+      editBuilder.replace(selection, base64_lines.join('\n'));
+    });
+    infoMsg(vscode, 'Lines converted to base64');
+  } else {
+    warnMsg(vscode, 'Lines were NOT converted to base64');
+  }
+}
+function trnslReadmeHandler() {
+  const translationsPath = path.join(
+    extensionPath,
+    'translations',
+    language,
+    'README.md'
+  );
+  const defaultPath = path.join(extensionPath, 'README.md');
+  let readmeContent;
+  try {
+    readmeContent = fs.readFileSync(translationsPath, 'utf8');
+  } catch (error) {
+    readmeContent = fs.readFileSync(defaultPath, 'utf8');
+  }
+  //convert text to html
+  readmeContentObj = markdownToObject(readmeContent);
+  let htmlCode = '<div id="main">';
+  //read texts
+  const entriesText = Object.entries(readmeContentObj.texts);
+  entriesText.forEach(function ([key, value], i) {
+    if (i == 0) {
+      htmlCode = htmlCode + key + value;
+    } else if (i > 0) {
+      htmlCode = htmlCode + key + value;
+    }
+    return htmlCode;
+  });
+  //add demo image
+  // htmlCode =
+  //   htmlCode + '<img src="' + `./translations/${language}/demo.png` + '">';
+  const mediaPath = vscode.Uri.file(
+    // path.join(context.extensionPath, 'translations', 'ru')
+    path.join(__dirname, '/translations')
+  ).with({ scheme: 'vscode-resource' });
+  // Construct the URI for the image
+  const imageUrl = mediaPath.with({
+    path: path.join(mediaPath.path, '/demo.gif'),
+  });
+  htmlCode = htmlCode + '<img style="width: 640px;" src="' + imageUrl + '">';
+  //read video
+  // htmlCode =
+  //   htmlCode +
+  //   '	<video width="640" height="360" controls><source src="' +
+  //   imageUrl +
+  //   '" type="video/mp4"></video>';
+  // read lists
+  const entriesList = Object.entries(readmeContentObj.lists);
+  entriesList.forEach(([key, value]) => {
+    // console.log(key, value); // Output: key1 value1, key2 value2, key3 value3
+    htmlCode = htmlCode + key + value;
+  });
+  htmlCode = htmlCode + '</div>';
+  //update readme
+  const panel = vscode.window.createWebviewPanel(
+    'translatedReadme',
+    'Translated README',
+    vscode.ViewColumn.One,
+    { enableScripts: true, retainContextWhenHidden: true }
+  );
+  const htmlContent = fs.readFileSync(
+    path.join(__dirname, '/translations/translreadme.html')
+  );
+  // Replace a placeholder in the HTML content with the dynamic value
+  const finalHtml = htmlContent
+    .toString()
+    .replace('{{translatedReadme}}', htmlCode);
+  // Set the HTML content in the webview panel
+  panel.webview.html = finalHtml;
+}
+
+function shuffleHandler() {
+  var editor = vscode.window.activeTextEditor;
+  if (!editor) {
+    return;
+  }
+
+  var selection = editor.selection;
+  var text = editor.document.getText(selection);
+  var lines = text.split('\n');
+
+  if (lines[lines.length - 1] === '\n') {
+    lines.pop();
+  }
+
+  var random_lines = randomizeArrayOrder(lines);
+  if (typeof random_lines !== 'undefined' && random_lines.length > 0) {
+    editor.edit(function (editBuilder) {
+      editBuilder.replace(selection, random_lines.join('\n'));
+    });
+
+    infoMsg(vscode, 'Lines shuffled');
+  } else {
+    warnMsg(vscode, "List wasn't shuffled");
+  }
+}
+function remDuplicatesHandler() {
+  var editor = vscode.window.activeTextEditor;
+  if (!editor) {
+    return;
+  }
+
+  var selection = editor.selection;
+  var text = editor.document.getText(selection);
+  var lines = text.split('\n');
+
+  var distinct_lines = [];
+  var duplicate_lines = [];
+
+  lines.forEach(function (el) {
+    if (distinct_lines.indexOf(el) === -1) {
+      distinct_lines.push(el);
+    } else {
+      duplicate_lines.push(el);
+    }
+  });
+
+  if (duplicate_lines.length > 0 && distinct_lines.length == 0) {
+    editor.edit(function (editBuilder) {
+      editBuilder.replace(selection, distinct_lines.join('\n'));
+    });
+    var counter = {
+      distinct: distinct_lines,
+      duplicate: duplicate_lines,
+    };
+    infoMsg(vscode, 'Duplicates removed', counter);
+    distinct_lines.length = 0;
+  } else if (distinct_lines.length > 0 && duplicate_lines.length == 0) {
+    var counter = {
+      distinct: distinct_lines,
+    };
+    warnMsg(vscode, 'List has not duplicates', counter);
+    duplicate_lines.length = 0;
+  } else if (duplicate_lines.length > 0 && distinct_lines.length > 0) {
+    editor.edit(function (editBuilder) {
+      editBuilder.replace(selection, distinct_lines.join('\n'));
+    });
+    var counter = {
+      distinct: distinct_lines,
+      duplicate: duplicate_lines,
+    };
+    infoMsg(vscode, 'Duplicates removed', counter);
+    distinct_lines.length = 0;
+    duplicate_lines.length = 0;
+  }
+}
 function randomizeArrayOrder(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -200,6 +247,14 @@ function randomizeArrayOrder(array) {
     array[j] = temporaryValue;
   }
   return array;
+}
+
+function base64ArrayOrder(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(btoa(arr[i]));
+  }
+  return result;
 }
 //counters
 function countStatusBarItem(vscode, counter) {

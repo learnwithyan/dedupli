@@ -1,5 +1,7 @@
 {
   "dedupli.remDuplicates.title": "DeDupli - 선택한 텍스트에서 중복된 항목을 제거합니다",
   "dedupli.shuffle.title": "DeDupli - 선택한 텍스트에서 임의의 줄",
+  "dedupli.base64.title": "DeDupli - 목록을 base64로 변환",
+
   "dedupli.showTranslReadme.title": "DeDupli - 번역된 README 보기"
 }
