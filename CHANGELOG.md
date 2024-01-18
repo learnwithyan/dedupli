@@ -21,7 +21,7 @@ added 2 translations for commands
 
 cleaned the code
 
-### 2.1.1
+### 2.2.1
 
 - added 15 translations
 - refactored the code
