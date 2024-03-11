@@ -30,3 +30,7 @@ cleaned the code
 ### 2.3.1
 
 - added remove empty lines
+
+### 2.3.2
+
+- fixed errors

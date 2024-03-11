@@ -2,7 +2,7 @@
   "name": "dedupli",
   "displayName": "DeDupli remove duplicates",
   "description": "Retain distinct lines of text, eliminating any duplicates from the current selection. Additionally, implement a command for randomizing the order of the presently selected lines.",
-  "version": "2.3.1",
+  "version": "2.2.1",
   "publisher": "learnwithyan",
   "icon": "images/logo_128.png",
   "bugs": {
@@ -79,8 +79,7 @@
     "type": "git",
     "url": "https://github.com/learnwithyan/dedupli.git"
   },
-  "devDependencies": {
-    "vscode": "^1.1.37",
+  "dependencies": {
     "vscode-nls": "^5.2.0"
   }
 }
