@@ -15,5 +15,6 @@ This extension works with selected text only. First you need to select all text.
 - DeDupli - remove duplicates from selected
 - DeDupli - shuffle lines from selected
 - DeDupli - convert list to base64
+- DeDupli - remove empty lines
 
 #

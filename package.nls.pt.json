@@ -2,6 +2,6 @@
   "dedupli.remDuplicates.title": "DeDupli - remova duplicatas do texto selecionado",
   "dedupli.shuffle.title": "DeDupli - linhas aleatórias do texto selecionado",
   "dedupli.base64.title": "DeDupli - converter lista para base64",
-
+  "dedupli.emptylines.title": "DeDupli - remover linhas vazias",
   "dedupli.showTranslReadme.title": "DeDupli - mostrar README traduzido"
 }

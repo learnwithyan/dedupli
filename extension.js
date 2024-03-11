@@ -59,17 +59,49 @@ function activate(context) {
     }
   );
 
+  //remove empty lines
+  var disposableRemoveEmpty = vscode.commands.registerCommand(
+    'dedupli.emptylines',
+    function () {
+      emptyLinesHandler();
+    }
+  );
+
   context.subscriptions.push(disposableTranslatedReadme);
   context.subscriptions.push(disposableremDuplicates);
   context.subscriptions.push(disposableShuffle);
   context.subscriptions.push(disposableBase64);
+  context.subscriptions.push(disposableRemoveEmpty);
 }
 exports.activate = activate;
 
 function deactivate() {}
 exports.deactivate = deactivate;
 
-// function helpers
+//remove empty lines
+function emptyLinesHandler() {
+  var editor = vscode.window.activeTextEditor;
+  if (!editor) {
+    return;
+  }
+
+  var selection = editor.selection;
+  var text = editor.document.getText(selection);
+  var lines = text.split('\n');
+
+  // Remove empty lines
+  var nonEmptyLines = lines.filter((line) => line.trim() !== '');
+
+  // Join the non-empty lines back into a single string
+  var updatedText = nonEmptyLines.join('\n');
+
+  // Replace the selected text with the updated text
+  editor.edit((editBuilder) => {
+    editBuilder.replace(selection, updatedText);
+    infoMsg(vscode, 'Empty lines were deleted');
+  });
+}
+//base64
 function base64Handler() {
   var editor = vscode.window.activeTextEditor;
   if (!editor) {
@@ -94,6 +126,16 @@ function base64Handler() {
     warnMsg(vscode, 'Lines were NOT converted to base64');
   }
 }
+
+function base64ArrayOrder(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(btoa(arr[i]));
+  }
+  return result;
+}
+
+// function helpers
 function trnslReadmeHandler() {
   const translationsPath = path.join(
     extensionPath,
@@ -249,13 +291,7 @@ function randomizeArrayOrder(array) {
   return array;
 }
 
-function base64ArrayOrder(arr) {
-  let result = [];
-  for (let i = 0; i < arr.length; i++) {
-    result.push(btoa(arr[i]));
-  }
-  return result;
-}
+//
 //counters
 function countStatusBarItem(vscode, counter) {
   var distinct_counter = 0;

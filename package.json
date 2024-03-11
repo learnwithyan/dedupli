@@ -37,6 +37,11 @@
         "icon": "$(source-control)"
       },
       {
+        "command": "dedupli.emptylines",
+        "title": "%dedupli.emptylines.title%",
+        "icon": "$(source-control)"
+      },
+      {
         "command": "dedupli.showTranslReadme",
         "title": "%dedupli.showTranslReadme.title%",
         "icon": "$(source-control)"
@@ -75,6 +80,7 @@
     "url": "https://github.com/learnwithyan/dedupli.git"
   },
   "dependencies": {
+    "vscode": "^1.1.37",
     "vscode-nls": "^5.2.0"
   }
 }
