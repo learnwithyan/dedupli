@@ -26,3 +26,7 @@ cleaned the code
 - added 15 translations
 - refactored the code
 - added convert list to base64
+
+### 2.3.1
+
+- added remove empty lines
