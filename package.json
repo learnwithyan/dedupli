@@ -10,8 +10,15 @@
     "email": "learnwithyan@hotmail.com"
   },
   "engines": {
-    "vscode": "^1.75.0"
+    "vscode": "^1.0.0"
   },
+  "activationEvents": [
+    "onCommand:dedupli.com1",
+    "onCommand:dedupli.com2",
+    "onCommand:dedupli.com3",
+    "onCommand:dedupli.com4",
+    "onCommand:dedupli.com5"
+  ],
   "categories": [
     "Other"
   ],
