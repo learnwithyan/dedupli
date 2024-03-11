@@ -7,11 +7,6 @@ var extId = 'learnwithyan.dedupli';
 
 //path of ext
 var extensionPath = vscode.extensions.getExtension(extId).extensionPath;
-//to store sb items
-var sbVars = {};
-
-//load lib to transl bar items
-var localizeVars = require('vscode-nls').loadMessageBundle();
 
 //get interface lang
 var language = vscode.env.language;
@@ -166,80 +161,6 @@ function readFile(filePath) {
     fileContent = 'error reading file' + error;
   }
   return fileContent;
-}
-
-//COUNTERS
-function countStatusBarItem(vscode, counter) {
-  var distinct_counter = 0;
-  var duplicate_counter = 0;
-  var letters_counter = 0;
-  for (var key in counter) {
-    if (key == 'distinct') {
-      //length of lines
-      let value = counter[key];
-      distinct_counter = parseInt(value.length);
-      //letters count
-      for (var i = 0; i < parseInt(value.length); i++) {
-        var currentString = value[i];
-        // Count the number of letters in the current string
-        for (var j = 0; j < currentString.length; j++) {
-          // Check if the character is a letter (assuming only alphabetic characters)
-          if (currentString[j].match(/[a-zA-Z0-9]/)) {
-            letters_counter++;
-          }
-        }
-      }
-    }
-    if (key == 'duplicate') {
-      duplicate_counter = counter[key].length;
-    }
-  }
-  //translate bar items
-  const distinctLinesCounter =
-    localizeVars.translations['distinctLinesCounter'];
-  const duplicatedLinesCounter =
-    localizeVars.translations['duplicatedLinesCounter'];
-  const symbolsLinesCounter = localizeVars.translations['symbolsLinesCounter'];
-
-  // console.log(symbolsLinesCounter);
-  chgStatusBarItem(
-    vscode,
-    'barDistinct',
-    distinctLinesCounter,
-    'statusBarItem.errorBackground',
-    'snake',
-    distinct_counter
-  );
-
-  chgStatusBarItem(
-    vscode,
-    'barDuplicate',
-    duplicatedLinesCounter,
-    'statusBarItem.warningBackground',
-    'files',
-    duplicate_counter
-  );
-
-  chgStatusBarItem(
-    vscode,
-    'barLetters',
-    symbolsLinesCounter,
-    'statusBarItem.errorBackground',
-    'text-size',
-    letters_counter
-  );
-}
-//counter helpers
-function chgStatusBarItem(vscode, sb_name, desc, color, icon, count_numb) {
-  if (!sbVars.hasOwnProperty(sb_name)) {
-    sbVars[sb_name] = vscode.window.createStatusBarItem(
-      vscode.StatusBarAlignment.Left
-    );
-  }
-  sbVars[sb_name].text = `$(${icon}) ${count_numb}`;
-  sbVars[sb_name].tooltip = desc;
-  sbVars[sb_name].backgroundColor = new vscode.ThemeColor(color);
-  sbVars[sb_name].show();
 }
 
 module.exports = {
