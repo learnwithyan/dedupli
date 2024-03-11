@@ -1,8 +1,7 @@
 {
-  "dedupli.remDuplicates.title": "DeDupli - удалить дубликаты из выделенного текста",
-  "dedupli.shuffle.title": "DeDupli - рандомно перемешать строки",
-  "dedupli.base64.title": "DeDupli - преобразовать список в base64",
-  "dedupli.emptylines.title": "DeDupli - удалить пустые строки",
-
-  "dedupli.showTranslReadme.title": "DeDupli - показать переведенный README"
+  "dedupli.com1.title": "DeDupli - показать переведенный README",
+  "dedupli.com2.title": "DeDupli - удалить дубликаты из выделенного текста",
+  "dedupli.com3.title": "DeDupli - рандомно перемешать строки",
+  "dedupli.com4.title": "DeDupli - преобразовать список в base64",
+  "dedupli.com5.title": "DeDupli - удалить пустые строки"
 }

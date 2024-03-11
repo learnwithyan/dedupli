@@ -1,7 +1,7 @@
 {
-  "dedupli.remDuplicates.title": "DeDupli - távolítsa el a másolatokat a kijelölt szövegből",
-  "dedupli.shuffle.title": "DeDupli - véletlenszerű sorok a kiválasztott szövegből",
-  "dedupli.base64.title": "DeDupli - konvertálja a listát base64-re",
-  "dedupli.emptylines.title": "DeDupli - üres sorok eltávolítása",
-  "dedupli.showTranslReadme.title": "DeDupli - a README fordítása"
+  "dedupli.com1.title": "DeDupli - a README fordítása",
+  "dedupli.com2.title": "DeDupli - távolítsa el a másolatokat a kijelölt szövegből",
+  "dedupli.com3.title": "DeDupli - véletlenszerű sorok a kiválasztott szövegből",
+  "dedupli.com4.title": "DeDupli - konvertálja a listát base64-re",
+  "dedupli.com5.title": "DeDupli - üres sorok eltávolítása"
 }

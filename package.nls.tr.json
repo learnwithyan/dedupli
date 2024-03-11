@@ -1,7 +1,7 @@
 {
-  "dedupli.remDuplicates.title": "DeDupli - seçilen metindeki kopyaları kaldır",
-  "dedupli.shuffle.title": "DeDupli - seçilen metinden rastgele çizgiler",
-  "dedupli.base64.title": "DeDupli - listeyi base64'e dönüştür",
-  "dedupli.emptylines.title": "DeDupli - boş satırları kaldır",
-  "dedupli.showTranslReadme.title": "DeDupli - çevrilmiş BENİOKU'yu göster"
+  "dedupli.com1.title": "DeDupli - çevrilmiş BENİOKU'yu göster",
+  "dedupli.com2.title": "DeDupli - seçilen metindeki kopyaları kaldır",
+  "dedupli.com3.title": "DeDupli - seçilen metinden rastgele çizgiler",
+  "dedupli.com4.title": "DeDupli - listeyi base64'e dönüştür",
+  "dedupli.com5.title": "DeDupli - boş satırları kaldır"
 }

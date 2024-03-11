@@ -2,7 +2,7 @@
   "name": "dedupli",
   "displayName": "DeDupli remove duplicates",
   "description": "Retain distinct lines of text, eliminating any duplicates from the current selection. Additionally, implement a command for randomizing the order of the presently selected lines.",
-  "version": "2.3.2",
+  "version": "2.3.4",
   "publisher": "learnwithyan",
   "icon": "images/logo_128.png",
   "bugs": {
@@ -22,29 +22,29 @@
   "contributes": {
     "commands": [
       {
-        "command": "dedupli.remDuplicates",
-        "title": "%dedupli.remDuplicates.title%",
+        "command": "dedupli.com1",
+        "title": "%dedupli.com1.title%",
         "icon": "$(sort-precedence)"
       },
       {
-        "command": "dedupli.shuffle",
-        "title": "%dedupli.shuffle.title%",
-        "icon": "$(source-control)"
+        "command": "dedupli.com2",
+        "title": "%dedupli.com2.title%",
+        "icon": "$(sort-precedence)"
       },
       {
-        "command": "dedupli.base64",
-        "title": "%dedupli.base64.title%",
-        "icon": "$(source-control)"
+        "command": "dedupli.com3",
+        "title": "%dedupli.com3.title%",
+        "icon": "$(sort-precedence)"
       },
       {
-        "command": "dedupli.emptylines",
-        "title": "%dedupli.emptylines.title%",
-        "icon": "$(source-control)"
+        "command": "dedupli.com4",
+        "title": "%dedupli.com4.title%",
+        "icon": "$(sort-precedence)"
       },
       {
-        "command": "dedupli.showTranslReadme",
-        "title": "%dedupli.showTranslReadme.title%",
-        "icon": "$(source-control)"
+        "command": "dedupli.com5",
+        "title": "%dedupli.com5.title%",
+        "icon": "$(sort-precedence)"
       }
     ]
   },
@@ -65,7 +65,7 @@
     "package.zh.nls.json"
   ],
   "configuration": {
-    "title": "Dedupli Configurations",
+    "title": "dedupli Configarations",
     "properties": {
       "dedupli.lineBreak": {
         "type": "string",
@@ -81,8 +81,5 @@
   },
   "dependencies": {
     "vscode-nls": "^5.2.0"
-  },
-  "devDependencies": {
-    "vscode": "^1.1.37"
   }
 }

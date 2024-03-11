@@ -1,7 +1,7 @@
 {
-  "dedupli.remDuplicates.title": "DeDupli - usuń duplikaty z zaznaczonego tekstu",
-  "dedupli.shuffle.title": "DeDupli - losowe linie z wybranego tekstu",
-  "dedupli.base64.title": "DeDupli - przekonwertuj listę na base64",
-  "dedupli.emptylines.title": "DeDupli - usuń puste linie",
-  "dedupli.showTranslReadme.title": "DeDupli - pokaż przetłumaczony plik README"
+  "dedupli.com1.title": "DeDupli - pokaż przetłumaczony plik README",
+  "dedupli.com2.title": "DeDupli - usuń duplikaty z zaznaczonego tekstu",
+  "dedupli.com3.title": "DeDupli - losowe linie z wybranego tekstu",
+  "dedupli.com4.title": "DeDupli - przekonwertuj listę na base64",
+  "dedupli.com5.title": "DeDupli - usuń puste linie"
 }
