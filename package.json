@@ -65,7 +65,7 @@
     "package.zh.nls.json"
   ],
   "configuration": {
-    "title": "Dedupli Configarations",
+    "title": "Dedupli Configurations",
     "properties": {
       "dedupli.lineBreak": {
         "type": "string",
@@ -80,6 +80,7 @@
     "url": "https://github.com/learnwithyan/dedupli.git"
   },
   "dependencies": {
+    "vscode": "^1.1.37",
     "vscode-nls": "^5.2.0"
   }
 }
