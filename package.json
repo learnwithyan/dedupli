@@ -80,7 +80,9 @@
     "url": "https://github.com/learnwithyan/dedupli.git"
   },
   "dependencies": {
-    "vscode": "^1.1.37",
     "vscode-nls": "^5.2.0"
+  },
+  "devDependencies": {
+    "vscode": "^1.1.37"
   }
 }
