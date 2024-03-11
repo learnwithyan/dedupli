@@ -43,6 +43,6 @@ cleaned the code
 
 - fixed errors3
 
-### 3.3.5
+### 3.3.6
 
-- new version, refactor functions
+- new version, refactor functions + logo
