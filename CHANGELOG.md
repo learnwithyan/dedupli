@@ -50,3 +50,7 @@ cleaned the code
 ### 3.3.7
 
 - fixed errors
+
+### 3.3.8
+
+- fixed errors of nls
