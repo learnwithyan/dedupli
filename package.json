@@ -10,7 +10,7 @@
     "email": "learnwithyan@hotmail.com"
   },
   "engines": {
-    "vscode": "^1.73.0"
+    "vscode": "^1.87.0"
   },
   "categories": [
     "Other"
