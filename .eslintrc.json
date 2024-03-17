@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": false,
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-const-assign": "off",
+    "no-this-before-super": "off",
+    "no-undef": "off",
+    "no-unreachable": "off",
+    "no-unused-vars": "off",
+    "constructor-super": "off",
+    "valid-typeof": "off"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "Empty lines were deleted": "Boş satırlar silindi",
+  "Lines converted to base64": "Satırlar base64'e dönüştürüldü",
+  "Lines were NOT converted to base64": "Satırlar base64'e dönüştürülmedi",
+  "Lines shuffled": "Satırlar karıştırıldı",
+  "List wasn't shuffled": "Liste karıştırılmadı",
+  "Duplicates removed": "Çift kopyalar kaldırıldı",
+  "List has not duplicates": "Listede çift kopya yok"
+}

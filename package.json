@@ -2,7 +2,7 @@
   "name": "dedupli",
   "displayName": "DeDupli remove duplicates",
   "description": "Retain distinct lines of text, eliminating any duplicates from the current selection. Additionally, implement a command for randomizing the order of the presently selected lines.",
-  "version": "3.3.7",
+  "version": "3.3.8",
   "publisher": "learnwithyan",
   "icon": "images/logo_128.png",
   "bugs": {
@@ -10,13 +10,13 @@
     "email": "learnwithyan@hotmail.com"
   },
   "engines": {
-    "vscode": "^1.0.0"
+    "vscode": "^1.73.0"
   },
-  "activationEvents": [
-    "onCommand"
-  ],
   "categories": [
     "Other"
+  ],
+  "activationEvents": [
+    "onCommand"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -79,7 +79,25 @@
     "type": "git",
     "url": "https://github.com/learnwithyan/dedupli.git"
   },
-  "dependencies": {
-    "vscode-nls": "^5.2.0"
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "jest"
+  },
+  "l10n": "./l10n",
+  "jest": {
+    "moduleNameMapper": {
+      "^vscode$": "<rootDir>/__mocks__/vscode.js"
+    }
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "typescript": "^5.3.3"
   }
 }

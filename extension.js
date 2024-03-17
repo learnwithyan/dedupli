@@ -4,27 +4,25 @@ const path = require('path'); // Import the 'path' module
 
 const extFuncs = require('./files/funcs.js');
 
-//path
-var extId = 'learnwithyan.dedupli';
-//path of ext
-var extensionPath = vscode.extensions.getExtension(extId).extensionPath;
-
 function activate(context) {
+  let flag;
+  let text;
+
   context.subscriptions.push(
     vscode.commands.registerCommand('dedupli.com1', function () {
-      extFuncs.trnslReadmeHandler();
+      extFuncs.trnslReadmeHandler(flag);
     }),
     vscode.commands.registerCommand('dedupli.com2', function () {
-      remDuplicatesHandler();
+      remDuplicatesHandler(flag, text);
     }),
     vscode.commands.registerCommand('dedupli.com3', function () {
-      shuffleHandler();
+      shuffleHandler(flag, text);
     }),
     vscode.commands.registerCommand('dedupli.com4', function () {
-      base64Handler();
+      base64Handler(flag, text);
     }),
     vscode.commands.registerCommand('dedupli.com5', function () {
-      emptyLinesHandler();
+      emptyLinesHandler(flag, text);
     })
   );
 }
@@ -35,52 +33,79 @@ exports.deactivate = deactivate;
 
 // function helpers
 //remove empty lines
-function emptyLinesHandler() {
-  var editor = vscode.window.activeTextEditor;
-  if (!editor) {
-    return;
+function emptyLinesHandler(flag, text) {
+  if (flag == undefined) {
+    var language = vscode.env.language;
+
+    var editor = vscode.window.activeTextEditor;
+    if (!editor) {
+      return;
+    }
+
+    var selection = editor.selection;
+    var text = editor.document.getText(selection);
+    var lines = text.split('\n');
+  } else {
+    var lines = text.split('\n');
   }
-
-  var selection = editor.selection;
-  var text = editor.document.getText(selection);
-  var lines = text.split('\n');
-
   // Remove empty lines
   var nonEmptyLines = lines.filter((line) => line.trim() !== '');
-
   // Join the non-empty lines back into a single string
   var updatedText = nonEmptyLines.join('\n');
-
   // Replace the selected text with the updated text
-  editor.edit((editBuilder) => {
-    editBuilder.replace(selection, updatedText);
-    extFuncs.infoMsg(vscode, 'Empty lines were deleted');
-  });
+  if (flag == undefined) {
+    editor.edit((editBuilder) => {
+      editBuilder.replace(selection, updatedText);
+      extFuncs.infoMsg(
+        vscode,
+        vscode.l10n.t('Empty lines were deleted', language)
+      );
+    });
+  } else {
+    return nonEmptyLines.join('\n');
+  }
 }
 
 //base64
-function base64Handler() {
-  var editor = vscode.window.activeTextEditor;
-  if (!editor) {
-    return;
-  }
+function base64Handler(flag, text) {
+  if (flag == undefined) {
+    var language = vscode.env.language;
+    var editor = vscode.window.activeTextEditor;
+    if (!editor) {
+      return;
+    }
+    console.log(editor);
+    var selection = editor.selection;
+    var text = editor.document.getText(selection);
+    var lines = text.split('\n');
 
-  var selection = editor.selection;
-  var text = editor.document.getText(selection);
-  var lines = text.split('\n');
-
-  if (lines[lines.length - 1] === '\n') {
-    lines.pop();
+    if (lines[lines.length - 1] === '\n') {
+      lines.pop();
+    }
+  } else {
+    var lines = text.split('\n');
   }
 
   var base64_lines = base64ArrayOrder(lines);
   if (typeof base64_lines !== 'undefined' && base64_lines.length > 0) {
-    editor.edit(function (editBuilder) {
-      editBuilder.replace(selection, base64_lines.join('\n'));
-    });
-    extFuncs.infoMsg(vscode, 'Lines converted to base64');
+    if (flag == undefined) {
+      editor.edit(function (editBuilder) {
+        editBuilder.replace(selection, base64_lines.join('\n'));
+      });
+    } else {
+      // return text;
+      lines = [];
+      return base64_lines.join('\n');
+    }
+    extFuncs.infoMsg(
+      vscode,
+      vscode.l10n.t('Lines converted to base64', language)
+    );
   } else {
-    extFuncs.warnMsg(vscode, 'Lines were NOT converted to base64');
+    extFuncs.warnMsg(
+      vscode,
+      vscode.l10n.t('Lines were NOT converted to base64', language)
+    );
   }
 }
 
@@ -92,43 +117,56 @@ function base64ArrayOrder(arr) {
   return result;
 }
 //shuffle lines
-function shuffleHandler() {
-  var editor = vscode.window.activeTextEditor;
-  if (!editor) {
-    return;
+function shuffleHandler(flag, text) {
+  if (flag == undefined) {
+    var language = vscode.env.language;
+
+    var editor = vscode.window.activeTextEditor;
+    if (!editor) {
+      return;
+    }
+
+    var selection = editor.selection;
+    var text = editor.document.getText(selection);
+    var lines = text.split('\n');
+  } else {
+    var lines = text.split('\n');
   }
-
-  var selection = editor.selection;
-  var text = editor.document.getText(selection);
-  var lines = text.split('\n');
-
   if (lines[lines.length - 1] === '\n') {
     lines.pop();
   }
 
   var random_lines = randomizeArrayOrder(lines);
   if (typeof random_lines !== 'undefined' && random_lines.length > 0) {
-    editor.edit(function (editBuilder) {
-      editBuilder.replace(selection, random_lines.join('\n'));
-    });
-
-    extFuncs.infoMsg(vscode, 'Lines shuffled');
+    if (flag == undefined) {
+      editor.edit(function (editBuilder) {
+        editBuilder.replace(selection, random_lines.join('\n'));
+      });
+    } else {
+      return random_lines.join('\n');
+    }
+    extFuncs.infoMsg(vscode, vscode.l10n.t('Lines shuffled', language));
   } else {
-    extFuncs.warnMsg(vscode, "List wasn't shuffled");
+    extFuncs.warnMsg(vscode, vscode.l10n.t("List wasn't shuffled", language));
   }
 }
 
 //rem duplicates
-function remDuplicatesHandler() {
-  var editor = vscode.window.activeTextEditor;
-  if (!editor) {
-    return;
+function remDuplicatesHandler(flag, text) {
+  if (flag == undefined) {
+    var language = vscode.env.language;
+
+    var editor = vscode.window.activeTextEditor;
+    if (!editor) {
+      return;
+    }
+
+    var selection = editor.selection;
+    var text = editor.document.getText(selection);
+    var lines = text.split('\n');
+  } else {
+    var lines = text.split('\n');
   }
-
-  var selection = editor.selection;
-  var text = editor.document.getText(selection);
-  var lines = text.split('\n');
-
   var distinct_lines = [];
   var duplicate_lines = [];
 
@@ -141,34 +179,54 @@ function remDuplicatesHandler() {
   });
 
   if (duplicate_lines.length > 0 && distinct_lines.length == 0) {
-    editor.edit(function (editBuilder) {
-      editBuilder.replace(selection, distinct_lines.join('\n'));
-    });
-    var counter = {
-      distinct: distinct_lines,
-      duplicate: duplicate_lines,
-    };
-    extFuncs.infoMsg(vscode, 'Duplicates removed', counter);
+    if (flag == undefined) {
+      editor.edit(function (editBuilder) {
+        editBuilder.replace(selection, distinct_lines.join('\n'));
+      });
 
-    distinct_lines.length = 0;
+      var counter = {
+        distinct: distinct_lines,
+        duplicate: duplicate_lines,
+      };
+      extFuncs.infoMsg(vscode, vscode.l10n.t('Duplicates removed', language));
+
+      distinct_lines.length = 0;
+    } else {
+      return distinct_lines.join('\n');
+    }
   } else if (distinct_lines.length > 0 && duplicate_lines.length == 0) {
-    var counter = {
-      distinct: distinct_lines,
-    };
-    extFuncs.warnMsg(vscode, 'List has not duplicates', counter);
-    duplicate_lines.length = 0;
+    if (flag == undefined) {
+      var counter = {
+        distinct: distinct_lines,
+      };
+      extFuncs.warnMsg(
+        vscode,
+        vscode.l10n.t('List has not duplicates', language)
+      );
+      duplicate_lines.length = 0;
+    } else {
+      return distinct_lines.join('\n');
+    }
   } else if (duplicate_lines.length > 0 && distinct_lines.length > 0) {
-    editor.edit(function (editBuilder) {
-      editBuilder.replace(selection, distinct_lines.join('\n'));
-    });
-    var counter = {
-      distinct: distinct_lines,
-      duplicate: duplicate_lines,
-    };
-    extFuncs.infoMsg(vscode, 'Duplicates removed', counter);
+    if (flag == undefined) {
+      editor.edit(function (editBuilder) {
+        editBuilder.replace(selection, distinct_lines.join('\n'));
+      });
+      var counter = {
+        distinct: distinct_lines,
+        duplicate: duplicate_lines,
+      };
+      extFuncs.infoMsg(
+        vscode,
+        vscode.l10n.t('Duplicates removed', language),
+        counter
+      );
 
-    distinct_lines.length = 0;
-    duplicate_lines.length = 0;
+      distinct_lines.length = 0;
+      duplicate_lines.length = 0;
+    } else {
+      return distinct_lines.join('\n');
+    }
   }
 }
 function randomizeArrayOrder(array) {
@@ -180,3 +238,10 @@ function randomizeArrayOrder(array) {
   }
   return array;
 }
+
+// module.exports = {
+//   base64Handler,
+//   remDuplicatesHandler,
+//   shuffleHandler,
+//   emptyLinesHandler,
+// };

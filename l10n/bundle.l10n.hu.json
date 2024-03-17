@@ -1,0 +1,9 @@
+{
+  "Empty lines were deleted": "A üres sorok törölve lettek",
+  "Lines converted to base64": "A sorok base64-é konvertálva lettek",
+  "Lines were NOT converted to base64": "A sorokat nem sikerült base64-é konvertálni",
+  "Lines shuffled": "A sorok összekeverve lettek",
+  "List wasn't shuffled": "A lista nem lett összekeverve",
+  "Duplicates removed": "A duplikátumok eltávolítva lettek",
+  "List has not duplicates": "A lista nem tartalmaz duplikátumokat"
+}

@@ -1,0 +1,9 @@
+{
+  "Empty lines were deleted": "Las líneas vacías fueron eliminadas",
+  "Lines converted to base64": "Las líneas fueron convertidas a base64",
+  "Lines were NOT converted to base64": "Las líneas no fueron convertidas a base64",
+  "Lines shuffled": "Las líneas fueron mezcladas",
+  "List wasn't shuffled": "La lista no fue mezclada",
+  "Duplicates removed": "Duplicados fueron eliminados",
+  "List has not duplicates": "La lista no tiene duplicados"
+}

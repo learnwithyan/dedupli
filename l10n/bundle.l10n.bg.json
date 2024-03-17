@@ -1,0 +1,9 @@
+{
+  "Empty lines were deleted": "Празните редове бяха изтрити",
+  "Lines converted to base64": "Редовете бяха конвертирани в base64",
+  "Lines were NOT converted to base64": "Редовете не бяха конвертирани в base64",
+  "Lines shuffled": "Редовете бяха разбъркани",
+  "List wasn't shuffled": "Списъкът не беше разбъркан",
+  "Duplicates removed": "Дубликатите бяха премахнати",
+  "List has not duplicates": "Списъкът няма дубликати"
+}

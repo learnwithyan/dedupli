@@ -1,0 +1,9 @@
+{
+  "Empty lines were deleted": "빈 줄이 삭제되었습니다",
+  "Lines converted to base64": "라인이 base64로 변환되었습니다",
+  "Lines were NOT converted to base64": "라인이 base64로 변환되지 않았습니다",
+  "Lines shuffled": "라인이 섞였습니다",
+  "List wasn't shuffled": "리스트가 섞이지 않았습니다",
+  "Duplicates removed": "중복이 제거되었습니다",
+  "List has not duplicates": "리스트에 중복이 없습니다"
+}

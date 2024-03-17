@@ -1,0 +1,9 @@
+{
+  "Empty lines were deleted": "Prázdné řádky byly smazány",
+  "Lines converted to base64": "Řádky byly převedeny na base64",
+  "Lines were NOT converted to base64": "Řádky nebyly převedeny na base64",
+  "Lines shuffled": "Řádky byly zamíchány",
+  "List wasn't shuffled": "Seznam nebyl zamíchán",
+  "Duplicates removed": "Duplikáty byly odstraněny",
+  "List has not duplicates": "Seznam neobsahuje duplikáty"
+}
