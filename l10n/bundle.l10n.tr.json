@@ -5,5 +5,7 @@
   "Lines shuffled": "Satırlar karıştırıldı",
   "List wasn't shuffled": "Liste karıştırılmadı",
   "Duplicates removed": "Çift kopyalar kaldırıldı",
-  "List has not duplicates": "Listede çift kopya yok"
+  "List has not duplicates": "Listede çift kopya yok",
+  "Lines capitalized": "Satırlar büyük harfe dönüştürüldü",
+  "Lines were NOT converted capitalized": "Satırlar büyük harfe dönüştürülmedi"
 }

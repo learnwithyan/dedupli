@@ -37,3 +37,13 @@ describe('emptyLinesHandler', () => {
     expect(encodedText).toBe('123\n4\n4');
   });
 });
+describe('capitalizeHandler', () => {
+  test('capitalizeHandler', () => {
+    const flag = 'test';
+    const text = 'hello';
+    const encodedText = moduleFuncs.capitalizeHandler(flag, text);
+    // console.log(encodedText);
+
+    expect(encodedText).toBe('HELLO');
+  });
+});

@@ -5,5 +5,7 @@
   "Lines shuffled": "A sorok összekeverve lettek",
   "List wasn't shuffled": "A lista nem lett összekeverve",
   "Duplicates removed": "A duplikátumok eltávolítva lettek",
-  "List has not duplicates": "A lista nem tartalmaz duplikátumokat"
+  "List has not duplicates": "A lista nem tartalmaz duplikátumokat",
+  "Lines capitalized": "Sorok nagybetűsítve",
+  "Lines were NOT converted capitalized": "A sorokat nem alakították át nagybetűssé"
 }

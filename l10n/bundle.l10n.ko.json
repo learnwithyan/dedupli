@@ -5,5 +5,7 @@
   "Lines shuffled": "라인이 섞였습니다",
   "List wasn't shuffled": "리스트가 섞이지 않았습니다",
   "Duplicates removed": "중복이 제거되었습니다",
-  "List has not duplicates": "리스트에 중복이 없습니다"
+  "List has not duplicates": "리스트에 중복이 없습니다",
+  "Lines capitalized": "대문자로 변환된 줄",
+  "Lines were NOT converted capitalized": "줄이 대문자로 변환되지 않았습니다"
 }

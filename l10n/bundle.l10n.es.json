@@ -5,5 +5,7 @@
   "Lines shuffled": "Las líneas fueron mezcladas",
   "List wasn't shuffled": "La lista no fue mezclada",
   "Duplicates removed": "Duplicados fueron eliminados",
-  "List has not duplicates": "La lista no tiene duplicados"
+  "List has not duplicates": "La lista no tiene duplicados",
+  "Lines capitalized": "Líneas en mayúsculas",
+  "Lines were NOT converted capitalized": "Las líneas NO se convirtieron en mayúsculas"
 }

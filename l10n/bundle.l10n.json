@@ -5,5 +5,7 @@
   "Lines shuffled": "Lines shuffled",
   "List wasn't shuffled": "List wasn't shuffled",
   "Duplicates removed": "Duplicates removed",
-  "List has not duplicates": "List has not duplicates"
+  "List has not duplicates": "List has not duplicates",
+  "Lines capitalized": "Lines capitalized",
+  "Lines were NOT converted capitalized": "Lines were NOT converted capitalized"
 }

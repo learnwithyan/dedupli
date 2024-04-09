@@ -23,6 +23,9 @@ function activate(context) {
     }),
     vscode.commands.registerCommand('dedupli.com5', function () {
       emptyLinesHandler(flag, text);
+    }),
+    vscode.commands.registerCommand('dedupli.com6', function () {
+      capitalizeHandler(flag, text);
     })
   );
 }
@@ -239,9 +242,51 @@ function randomizeArrayOrder(array) {
   return array;
 }
 
+//capitalize words
+function capitalizeHandler(flag, text) {
+  if (flag == undefined) {
+    var language = vscode.env.language;
+    var editor = vscode.window.activeTextEditor;
+    if (!editor) {
+      return;
+    }
+    console.log(editor);
+    var selection = editor.selection;
+    var text = editor.document.getText(selection);
+    var lines = text.split('\n');
+
+    if (lines[lines.length - 1] === '\n') {
+      lines.pop();
+    }
+  } else {
+    var lines = text.split('\n');
+  }
+
+  // var base64_lines = base64ArrayOrder(lines);
+  var capitalizedLines = lines.map((line) => line.toUpperCase());
+  if (typeof capitalizedLines !== 'undefined' && capitalizedLines.length > 0) {
+    if (flag == undefined) {
+      editor.edit(function (editBuilder) {
+        editBuilder.replace(selection, capitalizedLines.join('\n'));
+      });
+    } else {
+      // return text;
+      lines = [];
+      return capitalizedLines.join('\n');
+    }
+    extFuncs.infoMsg(vscode, vscode.l10n.t('Lines capitalized', language));
+  } else {
+    extFuncs.warnMsg(
+      vscode,
+      vscode.l10n.t('Lines were NOT converted capitalized', language)
+    );
+  }
+}
+
 // module.exports = {
 //   base64Handler,
 //   remDuplicatesHandler,
 //   shuffleHandler,
 //   emptyLinesHandler,
+//   capitalizeHandler,
 // };

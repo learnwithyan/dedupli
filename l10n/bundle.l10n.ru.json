@@ -5,5 +5,7 @@
   "Lines shuffled": "Строки перемешаны",
   "List wasn't shuffled": "Список не был перемешан",
   "Duplicates removed": "Дубликаты удалены",
-  "List has not duplicates": "Список не содержит дубликатов"
+  "List has not duplicates": "Список не содержит дубликатов",
+  "Lines capitalized": "Строки приведены к верхнему регистру",
+  "Lines were NOT converted capitalized": "Строки не были приведены к верхнему регистру"
 }

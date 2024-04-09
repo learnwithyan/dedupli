@@ -5,5 +5,7 @@
   "Lines shuffled": "Linhas foram embaralhadas",
   "List wasn't shuffled": "A lista não foi embaralhada",
   "Duplicates removed": "Duplicatas removidas",
-  "List has not duplicates": "A lista não possui duplicatas"
+  "List has not duplicates": "A lista não possui duplicatas",
+  "Lines capitalized": "Linhas capitalizadas",
+  "Lines were NOT converted capitalized": "As linhas não foram capitalizadas"
 }

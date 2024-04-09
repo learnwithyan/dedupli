@@ -5,5 +5,7 @@
   "Lines shuffled": "Редовете бяха разбъркани",
   "List wasn't shuffled": "Списъкът не беше разбъркан",
   "Duplicates removed": "Дубликатите бяха премахнати",
-  "List has not duplicates": "Списъкът няма дубликати"
+  "List has not duplicates": "Списъкът няма дубликати",
+  "Lines capitalized": "Главни редове",
+  "Lines were NOT converted capitalized": "Редовете НЕ бяха преобразувани в главни"
 }

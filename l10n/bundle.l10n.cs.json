@@ -5,5 +5,7 @@
   "Lines shuffled": "Řádky byly zamíchány",
   "List wasn't shuffled": "Seznam nebyl zamíchán",
   "Duplicates removed": "Duplikáty byly odstraněny",
-  "List has not duplicates": "Seznam neobsahuje duplikáty"
+  "List has not duplicates": "Seznam neobsahuje duplikáty",
+  "Lines capitalized": "Řádky s velkými písmeny",
+  "Lines were NOT converted capitalized": "Řádky nebyly převedeny na velká písmena"
 }
