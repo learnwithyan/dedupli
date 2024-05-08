@@ -2,7 +2,7 @@
   "name": "dedupli",
   "displayName": "DeDupli remove duplicates",
   "description": "Retain distinct lines of text, eliminating any duplicates from the current selection. Additionally, implement a command for randomizing the order of the presently selected lines.",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "publisher": "learnwithyan",
   "icon": "images/logo_128.png",
   "bugs": {
@@ -10,7 +10,7 @@
     "email": "learnwithyan@hotmail.com"
   },
   "engines": {
-    "vscode": "^1.9.0"
+    "vscode": "^1.87.0"
   },
   "categories": [
     "Other"
