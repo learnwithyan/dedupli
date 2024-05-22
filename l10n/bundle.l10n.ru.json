@@ -7,5 +7,7 @@
   "Duplicates removed": "Дубликаты удалены",
   "List has not duplicates": "Список не содержит дубликатов",
   "Lines capitalized": "Строки приведены к верхнему регистру",
-  "Lines were NOT converted capitalized": "Строки не были приведены к верхнему регистру"
+  "Lines were NOT converted capitalized": "Строки не были приведены к верхнему регистру",
+  "Lines lowercased": "Строки в нижнем регистре",
+  "Lines were NOT converted lowercased": "Строки НЕ были преобразованы в нижний регистр"
 }

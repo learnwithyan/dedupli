@@ -7,5 +7,7 @@
   "Duplicates removed": "A duplikátumok eltávolítva lettek",
   "List has not duplicates": "A lista nem tartalmaz duplikátumokat",
   "Lines capitalized": "Sorok nagybetűsítve",
-  "Lines were NOT converted capitalized": "A sorokat nem alakították át nagybetűssé"
+  "Lines were NOT converted capitalized": "A sorokat nem alakították át nagybetűssé",
+  "Lines lowercased": "Sorok kisbetűkkel",
+  "Lines were NOT converted lowercased": "A sorokat NEM alakították kisbetűssé"
 }

@@ -7,5 +7,7 @@
   "Duplicates removed": "重复项已移除",
   "List has not duplicates": "列表中没有重复项",
   "Lines capitalized": "行大写化",
-  "Lines were NOT converted capitalized": "行未转换为大写"
+  "Lines were NOT converted capitalized": "行未转换为大写",
+  "Lines lowercased": "小写的行",
+  "Lines were NOT converted lowercased": "行未转换为小写"
 }

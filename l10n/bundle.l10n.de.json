@@ -7,5 +7,7 @@
   "Duplicates removed": "Duplikate wurden entfernt",
   "List has not duplicates": "Die Liste hat keine Duplikate",
   "Lines capitalized": "Zeilen großgeschrieben",
-  "Lines were NOT converted capitalized": "Zeilen wurden NICHT großgeschrieben"
+  "Lines were NOT converted capitalized": "Zeilen wurden NICHT großgeschrieben",
+  "Lines lowercased": "Zeilen in Kleinbuchstaben",
+  "Lines were NOT converted lowercased": "Zeilen wurden NICHT in Kleinbuchstaben umgewandelt"
 }

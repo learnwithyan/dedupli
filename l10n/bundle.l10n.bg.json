@@ -7,5 +7,7 @@
   "Duplicates removed": "Дубликатите бяха премахнати",
   "List has not duplicates": "Списъкът няма дубликати",
   "Lines capitalized": "Главни редове",
-  "Lines were NOT converted capitalized": "Редовете НЕ бяха преобразувани в главни"
+  "Lines were NOT converted capitalized": "Редовете НЕ бяха преобразувани в главни",
+  "Lines lowercased": "Редове с малки букви",
+  "Lines were NOT converted lowercased": "Редовете НЕ бяха преобразувани в малки букви"
 }

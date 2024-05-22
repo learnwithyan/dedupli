@@ -47,3 +47,13 @@ describe('capitalizeHandler', () => {
     expect(encodedText).toBe('HELLO');
   });
 });
+describe('lowercaseHandler', () => {
+  test('lowercaseHandler', () => {
+    const flag = 'test';
+    const text = 'HELLO';
+    const encodedText = moduleFuncs.lowercaseHandler(flag, text);
+    // console.log(encodedText);
+
+    expect(encodedText).toBe('hello');
+  });
+});

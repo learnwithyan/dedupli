@@ -2,7 +2,7 @@ var vscode = require('vscode');
 const fs = require('fs');
 const path = require('path'); // Import the 'path' module
 
-const extFuncs = require('./files/funcs.js');
+const extFuncs = require('./files/funcs.obf.js');
 
 function activate(context) {
   let flag;
@@ -26,6 +26,9 @@ function activate(context) {
     }),
     vscode.commands.registerCommand('dedupli.com6', function () {
       capitalizeHandler(flag, text);
+    }),
+    vscode.commands.registerCommand('dedupli.com7', function () {
+      lowercaseHandler(flag, text);
     })
   );
 }
@@ -283,10 +286,52 @@ function capitalizeHandler(flag, text) {
   }
 }
 
+//lowercase words
+function lowercaseHandler(flag, text) {
+  if (flag == undefined) {
+    var language = vscode.env.language;
+    var editor = vscode.window.activeTextEditor;
+    if (!editor) {
+      return;
+    }
+    console.log(editor);
+    var selection = editor.selection;
+    var text = editor.document.getText(selection);
+    var lines = text.split('\n');
+
+    if (lines[lines.length - 1] === '\n') {
+      lines.pop();
+    }
+  } else {
+    var lines = text.split('\n');
+  }
+
+  // var base64_lines = base64ArrayOrder(lines);
+  var lowercasedLines = lines.map((line) => line.toLowerCase());
+  if (typeof lowercasedLines !== 'undefined' && lowercasedLines.length > 0) {
+    if (flag == undefined) {
+      editor.edit(function (editBuilder) {
+        editBuilder.replace(selection, lowercasedLines.join('\n'));
+      });
+    } else {
+      // return text;
+      lines = [];
+      return lowercasedLines.join('\n');
+    }
+    extFuncs.infoMsg(vscode, vscode.l10n.t('Lines lowercased', language));
+  } else {
+    extFuncs.warnMsg(
+      vscode,
+      vscode.l10n.t('Lines were NOT converted lowercased', language)
+    );
+  }
+}
+
 // module.exports = {
 //   base64Handler,
 //   remDuplicatesHandler,
 //   shuffleHandler,
 //   emptyLinesHandler,
 //   capitalizeHandler,
+//   lowercaseHandler,
 // };

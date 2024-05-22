@@ -7,5 +7,7 @@
   "Duplicates removed": "Çift kopyalar kaldırıldı",
   "List has not duplicates": "Listede çift kopya yok",
   "Lines capitalized": "Satırlar büyük harfe dönüştürüldü",
-  "Lines were NOT converted capitalized": "Satırlar büyük harfe dönüştürülmedi"
+  "Lines were NOT converted capitalized": "Satırlar büyük harfe dönüştürülmedi",
+  "Lines lowercased": "Küçük harfli satırlar",
+  "Lines were NOT converted lowercased": "Satırlar küçük harfe DÖNÜŞTÜRÜLMEDİ"
 }

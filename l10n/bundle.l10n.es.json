@@ -7,5 +7,7 @@
   "Duplicates removed": "Duplicados fueron eliminados",
   "List has not duplicates": "La lista no tiene duplicados",
   "Lines capitalized": "Líneas en mayúsculas",
-  "Lines were NOT converted capitalized": "Las líneas NO se convirtieron en mayúsculas"
+  "Lines were NOT converted capitalized": "Las líneas NO se convirtieron en mayúsculas",
+  "Lines lowercased": "Líneas en minúsculas",
+  "Lines were NOT converted lowercased": "Las líneas NO se convirtieron en minúsculas"
 }

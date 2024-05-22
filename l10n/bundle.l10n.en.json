@@ -7,5 +7,7 @@
   "Duplicates removed": "Duplicates removed",
   "List has not duplicates": "List has not duplicates",
   "Lines capitalized": "Lines capitalized",
-  "Lines were NOT converted capitalized": "Lines were NOT converted capitalized"
+  "Lines were NOT converted capitalized": "Lines were NOT converted capitalized",
+  "Lines lowercased": "Lines lowercased",
+  "Lines were NOT converted lowercased": "Lines were NOT converted lowercased"
 }
