@@ -1,13 +1,20 @@
 {
+  "Show translated README": "Mostrar README traducido",
+  "Remove duplicates from selected text": "Eliminar duplicados del texto seleccionado",
+  "Random lines from selected text": "Líneas aleatorias del texto seleccionado",
+  "Convert list to base64": "Convertir lista a base64",
+  "Remove empty lines": "Eliminar líneas vacías",
+  "Capitalize lines": "Capitalizar líneas",
+  "Lowercase lines": "Convertir líneas a minúsculas",
   "Empty lines were deleted": "Las líneas vacías fueron eliminadas",
   "Lines converted to base64": "Las líneas fueron convertidas a base64",
-  "Lines were NOT converted to base64": "Las líneas no fueron convertidas a base64",
+  "Lines were NOT converted to base64": "Las líneas NO fueron convertidas a base64",
   "Lines shuffled": "Las líneas fueron mezcladas",
   "List wasn't shuffled": "La lista no fue mezclada",
-  "Duplicates removed": "Duplicados fueron eliminados",
+  "Duplicates removed": "Duplicados eliminados",
   "List has not duplicates": "La lista no tiene duplicados",
-  "Lines capitalized": "Líneas en mayúsculas",
-  "Lines were NOT converted capitalized": "Las líneas NO se convirtieron en mayúsculas",
-  "Lines lowercased": "Líneas en minúsculas",
-  "Lines were NOT converted lowercased": "Las líneas NO se convirtieron en minúsculas"
+  "Lines capitalized": "Las líneas fueron capitalizadas",
+  "Lines were NOT converted capitalized": "Las líneas NO fueron capitalizadas",
+  "Lines lowercased": "Las líneas fueron convertidas a minúsculas",
+  "Lines were NOT converted lowercased": "Las líneas NO fueron convertidas a minúsculas"
 }

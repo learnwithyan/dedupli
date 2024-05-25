@@ -10,10 +10,16 @@ Retain distinct lines of text, eliminating any duplicates from the current selec
 
 This extension works with selected text only. First you need to select all text. Second press F1 and in menu type "Dedupli". Third you can choose one of commands you need.
 
-## What commands you can use?
+## What features we have?
 
-- DeDupli - remove duplicates from selected
-- DeDupli - shuffle lines from selected
-- DeDupli - remove empty lines
+- Works fast with any text or code
+- Quick change text to UPPERCASE or lowercase
+- You can call commands from F1 panel or leftside panel
+- Dedupli is translated to cs, de, es, fr, hu, it, ko, pl, pt, ru, tr, zh languages
+- Have detailed help instructions + video documentation
+
+## Use from leftside panel
+
+[![Vscode extension](/translations/demo2.gif 'Vscode extension demo')](https://learnwithyan.com)
 
 #

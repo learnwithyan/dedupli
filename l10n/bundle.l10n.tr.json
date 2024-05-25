@@ -1,13 +1,20 @@
 {
+  "Show translated README": "Çevrilmiş README'yi göster",
+  "Remove duplicates from selected text": "Seçilen metinden yinelenenleri kaldır",
+  "Random lines from selected text": "Seçilen metinden rastgele satırlar",
+  "Convert list to base64": "Listeyi base64'e dönüştür",
+  "Remove empty lines": "Boş satırları kaldır",
+  "Capitalize lines": "Satırları büyük harfe çevir",
+  "Lowercase lines": "Satırları küçük harfe çevir",
   "Empty lines were deleted": "Boş satırlar silindi",
   "Lines converted to base64": "Satırlar base64'e dönüştürüldü",
   "Lines were NOT converted to base64": "Satırlar base64'e dönüştürülmedi",
   "Lines shuffled": "Satırlar karıştırıldı",
   "List wasn't shuffled": "Liste karıştırılmadı",
-  "Duplicates removed": "Çift kopyalar kaldırıldı",
-  "List has not duplicates": "Listede çift kopya yok",
-  "Lines capitalized": "Satırlar büyük harfe dönüştürüldü",
-  "Lines were NOT converted capitalized": "Satırlar büyük harfe dönüştürülmedi",
-  "Lines lowercased": "Küçük harfli satırlar",
-  "Lines were NOT converted lowercased": "Satırlar küçük harfe DÖNÜŞTÜRÜLMEDİ"
+  "Duplicates removed": "Yinelenenler kaldırıldı",
+  "List has not duplicates": "Listede yinelenen yok",
+  "Lines capitalized": "Satırlar büyük harfe çevrildi",
+  "Lines were NOT converted capitalized": "Satırlar büyük harfe çevrilmemiş",
+  "Lines lowercased": "Satırlar küçük harfe çevrildi",
+  "Lines were NOT converted lowercased": "Satırlar küçük harfe çevrilmemiş"
 }

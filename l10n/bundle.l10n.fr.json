@@ -1,13 +1,20 @@
 {
+  "Show translated README": "Afficher le README traduit",
+  "Remove duplicates from selected text": "Supprimer les doublons du texte sélectionné",
+  "Random lines from selected text": "Lignes aléatoires du texte sélectionné",
+  "Convert list to base64": "Convertir la liste en base64",
+  "Remove empty lines": "Supprimer les lignes vides",
+  "Capitalize lines": "Mettre les lignes en majuscules",
+  "Lowercase lines": "Mettre les lignes en minuscules",
   "Empty lines were deleted": "Les lignes vides ont été supprimées",
   "Lines converted to base64": "Les lignes ont été converties en base64",
-  "Lines were NOT converted to base64": "Les lignes n'ont pas été converties en base64",
+  "Lines were NOT converted to base64": "Les lignes n'ont PAS été converties en base64",
   "Lines shuffled": "Les lignes ont été mélangées",
   "List wasn't shuffled": "La liste n'a pas été mélangée",
   "Duplicates removed": "Les doublons ont été supprimés",
-  "List has not duplicates": "La liste ne contient pas de doublons",
-  "Lines capitalized": "Lignes en majuscules",
-  "Lines were NOT converted capitalized": "Les lignes n'ont pas été converties en majuscules",
-  "Lines lowercased": "Lignes en minuscules",
-  "Lines were NOT converted lowercased": "Les lignes n'ont PAS été converties en minuscules"
+  "List has not duplicates": "La liste n'a pas de doublons",
+  "Lines capitalized": "Les lignes ont été mises en majuscules",
+  "Lines were NOT converted capitalized": "Les lignes n'ont PAS été mises en majuscules",
+  "Lines lowercased": "Les lignes ont été mises en minuscules",
+  "Lines were NOT converted lowercased": "Les lignes n'ont PAS été mises en minuscules"
 }

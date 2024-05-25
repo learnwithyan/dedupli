@@ -1,13 +1,20 @@
 {
-  "Empty lines were deleted": "Usunięto puste linie",
-  "Lines converted to base64": "Linie zostały przekonwertowane na base64",
-  "Lines were NOT converted to base64": "Linie NIE zostały przekonwertowane na base64",
+  "Show translated README": "Pokaż przetłumaczony README",
+  "Remove duplicates from selected text": "Usuń duplikaty z zaznaczonego tekstu",
+  "Random lines from selected text": "Losowe linie z zaznaczonego tekstu",
+  "Convert list to base64": "Konwertuj listę do base64",
+  "Remove empty lines": "Usuń puste linie",
+  "Capitalize lines": "Zapisz linie wielką literą",
+  "Lowercase lines": "Zapisz linie małą literą",
+  "Empty lines were deleted": "Puste linie zostały usunięte",
+  "Lines converted to base64": "Linie zostały skonwertowane do base64",
+  "Lines were NOT converted to base64": "Linie nie zostały skonwertowane do base64",
   "Lines shuffled": "Linie zostały wymieszane",
   "List wasn't shuffled": "Lista nie została wymieszana",
-  "Duplicates removed": "Usunięto duplikaty",
+  "Duplicates removed": "Duplikaty zostały usunięte",
   "List has not duplicates": "Lista nie zawiera duplikatów",
-  "Lines capitalized": "Linie zapisane wielką literą",
-  "Lines were NOT converted capitalized": "Linie nie zostały zamienione na wielkie litery",
-  "Lines lowercased": "Wiersze małymi literami",
-  "Lines were NOT converted lowercased": "Wiersze NIE zostały przekonwertowane na małe litery"
+  "Lines capitalized": "Linie zostały zapisane wielką literą",
+  "Lines were NOT converted capitalized": "Linie nie zostały zapisane wielką literą",
+  "Lines lowercased": "Linie zostały zapisane małą literą",
+  "Lines were NOT converted lowercased": "Linie nie zostały zapisane małą literą"
 }

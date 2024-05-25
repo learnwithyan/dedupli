@@ -1,13 +1,20 @@
 {
+  "Show translated README": "Покажи преведения README",
+  "Remove duplicates from selected text": "Премахни дубликати от избрания текст",
+  "Random lines from selected text": "Случайни редове от избрания текст",
+  "Convert list to base64": "Конвертирай списъка в base64",
+  "Remove empty lines": "Премахни празни редове",
+  "Capitalize lines": "Главни букви на редовете",
+  "Lowercase lines": "Малки букви на редовете",
   "Empty lines were deleted": "Празните редове бяха изтрити",
-  "Lines converted to base64": "Редовете бяха конвертирани в base64",
-  "Lines were NOT converted to base64": "Редовете не бяха конвертирани в base64",
-  "Lines shuffled": "Редовете бяха разбъркани",
+  "Lines converted to base64": "Редовете са конвертирани в base64",
+  "Lines were NOT converted to base64": "Редовете НЕ бяха конвертирани в base64",
+  "Lines shuffled": "Редовете са разбъркани",
   "List wasn't shuffled": "Списъкът не беше разбъркан",
-  "Duplicates removed": "Дубликатите бяха премахнати",
+  "Duplicates removed": "Дубликатите са премахнати",
   "List has not duplicates": "Списъкът няма дубликати",
-  "Lines capitalized": "Главни редове",
-  "Lines were NOT converted capitalized": "Редовете НЕ бяха преобразувани в главни",
-  "Lines lowercased": "Редове с малки букви",
-  "Lines were NOT converted lowercased": "Редовете НЕ бяха преобразувани в малки букви"
+  "Lines capitalized": "Редовете са с главни букви",
+  "Lines were NOT converted capitalized": "Редовете НЕ бяха конвертирани в главни букви",
+  "Lines lowercased": "Редовете са с малки букви",
+  "Lines were NOT converted lowercased": "Редовете НЕ бяха конвертирани в малки букви"
 }

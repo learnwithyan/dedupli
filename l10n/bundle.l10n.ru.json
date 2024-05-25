@@ -1,13 +1,20 @@
 {
+  "Show translated README": "Показать переведенное README",
+  "Remove duplicates from selected text": "Удалить дубликаты из выбранного текста",
+  "Random lines from selected text": "Случайные строки из выбранного текста",
+  "Convert list to base64": "Преобразовать список в base64",
+  "Remove empty lines": "Удалить пустые строки",
+  "Capitalize lines": "Прописные строки",
+  "Lowercase lines": "Строчные строки",
   "Empty lines were deleted": "Пустые строки были удалены",
   "Lines converted to base64": "Строки преобразованы в base64",
   "Lines were NOT converted to base64": "Строки НЕ были преобразованы в base64",
   "Lines shuffled": "Строки перемешаны",
   "List wasn't shuffled": "Список не был перемешан",
   "Duplicates removed": "Дубликаты удалены",
-  "List has not duplicates": "Список не содержит дубликатов",
-  "Lines capitalized": "Строки приведены к верхнему регистру",
-  "Lines were NOT converted capitalized": "Строки не были приведены к верхнему регистру",
-  "Lines lowercased": "Строки в нижнем регистре",
-  "Lines were NOT converted lowercased": "Строки НЕ были преобразованы в нижний регистр"
+  "List has not duplicates": "В списке нет дубликатов",
+  "Lines capitalized": "Строки прописные",
+  "Lines were NOT converted capitalized": "Строки НЕ были преобразованы в прописные",
+  "Lines lowercased": "Строки строчные",
+  "Lines were NOT converted lowercased": "Строки НЕ были преобразованы в строчные"
 }

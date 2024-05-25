@@ -1,4 +1,11 @@
 {
+  "Show translated README": "Show translated README",
+  "Remove duplicates from selected text": "Remove duplicates from selected text",
+  "Random lines from selected text": "Random lines from selected text",
+  "Convert list to base64": "Convert list to base64",
+  "Remove empty lines": "Remove empty lines",
+  "Capitalize lines": "Capitalize lines",
+  "Lowercase lines": "Lowercase lines",
   "Empty lines were deleted": "Empty lines were deleted",
   "Lines converted to base64": "Lines converted to base64",
   "Lines were NOT converted to base64": "Lines were NOT converted to base64",

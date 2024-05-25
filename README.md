@@ -6,6 +6,10 @@ Retain distinct lines of text, eliminating any duplicates from the current selec
 
 [![Vscode extension](/translations/demo.gif 'Vscode extension demo')](https://learnwithyan.com)
 
+## Use from leftside panel
+
+[![Vscode extension](/translations/demo2.gif 'Vscode extension demo')](https://learnwithyan.com)
+
 ## How to use?
 
 This extension works with selected text only. First you need to select all text. Second press F1 and in menu type "Dedupli". Third you can choose one of commands you need.
