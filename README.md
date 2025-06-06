@@ -1,48 +1,72 @@
-# DeDupli
+# 🧹 DeDupli – Clean & Organize Your Code Effortlessly
 
-Retain distinct lines of text, eliminating any duplicates from the current selection. Additionally, implement a command for randomizing the order of the presently selected lines.
+![Version](https://img.shields.io/visual-studio-marketplace/v/learnwithyan.dedupli?label=Version)
+![Downloads](https://img.shields.io/visual-studio-marketplace/d/learnwithyan.dedupli?label=Downloads)
+![Rating](https://img.shields.io/visual-studio-marketplace/stars/learnwithyan.dedupli?label=Rating)
 
-##
+**DeDupli** is a lightweight ⚡ yet powerful 💪 Visual Studio Code extension that helps you clean up your text and code in seconds. Whether you're a developer, analyst, or just tidying up content — this tool is your quick-fix buddy!
+
+---
+
+## ✨ Features
+
+🧽 **Remove Duplicate Lines**  
+Eliminate redundant lines and keep only unique entries in your selection.
+
+🔀 **Shuffle Lines**  
+Randomize the order of selected lines — perfect for creating test cases or quizzes.
+
+🧾 **Convert to Base64**  
+Easily encode any selection into Base64 format.
+
+📉 **Remove Empty Lines**  
+Tidy up your document by getting rid of blank lines.
+
+---
+
+## ⚙️ How to Use
+
+1. 🖱️ **Select text** you want to process.
+2. 🎯 Press `F1` or `Ctrl+Shift+P` to open the **Command Palette**.
+3. 💼 Type `DeDupli` and choose one of the following commands:
+   - `🧽 Remove Duplicates`
+   - `🔀 Shuffle Lines`
+   - `🧾 Convert to Base64`
+   - `📉 Remove Empty Lines`
+
+*✅ Works on selected text only — giving you full control.*
 
 [![Vscode extension](/translations/demo.gif 'Vscode extension demo')](https://learnwithyan.com)
 
-## Use from leftside panel
+---
+
+## 👨‍💻 Perfect For
+
+- 💻 **Developers** – Clean up log files or source code.
+- 📊 **Data Analysts** – Prepare data by deduplicating and reformatting.
+- ✍️ **Writers** – Shuffle content, remove extra spaces, and more.
+
+---
+
+## 📦 Installation
+
+1. Open **Visual Studio Code**.
+2. Go to the **Extensions view** (`Ctrl+Shift+X`).
+3. Search for `DeDupli`.
+4. Click **Install**.
 
 [![Vscode extension](/translations/demo2.gif 'Vscode extension demo')](https://learnwithyan.com)
 
-## How to use?
+## 🎬 See it in action on YouTube:
 
-This extension works with selected text only. First you need to select all text. Second press F1 and in menu type "Dedupli". Third you can choose one of commands you need.
+[Watch on YouTube](https://www.youtube.com/watch?v=f9PHCYbTWbc)
 
-## Do you like chat GPT?
+## 🧠 Stay Sharp with DeDupli
 
-Try a new extension "Doctor GPT" to robust your work in VS code.
+Boost your productivity and code clarity with DeDupli:
 
-- [Install Doctor GPT](https://marketplace.visualstudio.com/items?itemName=learnwithyan.doctorgpt)
+- 🔍 **Stay Focused** – Eliminate distractions by keeping your files clean and minimal.
+- ✨ **Write Clean Code** – Remove clutter and redundancy to highlight what really matters.
+- 🕒 **Save Time** – Automate tedious cleanup tasks in just a few clicks.
 
-### Features
-
-- Work on your code with AI that knows your code
-- Get AI-powered code completions, right within your IDE
-- Ask follow-up questions to refine the output
-- View and continue past chat conversations
-- Chat in your preferred local language
-- Robust data privacy: Your code remains private
-
-### What can you do with Doctor GPT?
-
-- Receive 🚀 immediate responses to your coding inquiries by simply entering your question into the chatbox and allowing [Doctor GPT](https://marketplace.visualstudio.com/items?itemName=learnwithyan.doctorgpt) to assist you 😉
-- Choose your prefered code language from 45 💥 items list to highlight syntax in a better way
-- Set Doctor GPT text size
-- Set text Primary color
-- Set text Secondary color
-- Choose any background color. From all 🌈 rainbow
-
-## What commands you can use?
-
-- DeDupli - remove duplicates from selected
-- DeDupli - shuffle lines from selected
-- DeDupli - convert list to base64
-- DeDupli - remove empty lines
-
-#
+Keep your workflow sharp and efficient — one command at a time.
