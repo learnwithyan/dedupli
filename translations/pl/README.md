@@ -1,8 +1,8 @@
 # 🧹 DeDupli – Łatwe czyszczenie i organizacja kodu
 
-![Wersja](https://img.shields.io/visual-studio-marketplace/v/learnwithyan.dedupli?label=Wersja)
-![Pobrania](https://img.shields.io/visual-studio-marketplace/d/learnwithyan.dedupli?label=Pobrania)
-![Ocena](https://img.shields.io/visual-studio-marketplace/stars/learnwithyan.dedupli?label=Ocena)
+![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
+![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
 **DeDupli** to lekka ⚡, a zarazem potężna 💪 wtyczka do Visual Studio Code, która pomaga w kilka sekund wyczyścić tekst i kod. Niezależnie czy jesteś programistą, analitykiem danych czy po prostu chcesz uporządkować zawartość — to narzędzie jest Twoim szybkim pomocnikiem!
 

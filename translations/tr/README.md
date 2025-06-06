@@ -1,8 +1,8 @@
 # 🧹 DeDupli – Kodunuzu Kolayca Temizleyin ve Düzenleyin
 
-![Sürüm](https://img.shields.io/visual-studio-marketplace/v/learnwithyan.dedupli?label=Sürüm)
-![İndirilenler](https://img.shields.io/visual-studio-marketplace/d/learnwithyan.dedupli?label=İndirilenler)
-![Puan](https://img.shields.io/visual-studio-marketplace/stars/learnwithyan.dedupli?label=Puan)
+![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
+![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
 **DeDupli**, Visual Studio Code için hafif ⚡ ama güçlü 💪 bir eklentidir ve metninizi ve kodunuzu saniyeler içinde temizlemenize yardımcı olur. İster geliştirici olun, ister analist ya da sadece içeriği düzenlemek isteyen biri olun — bu araç hızlı yardımcınız!
 

@@ -1,8 +1,8 @@
 # 🧹 DeDupli – 손쉽게 코드 정리 및 정돈하기
 
-![버전](https://img.shields.io/visual-studio-marketplace/v/learnwithyan.dedupli?label=버전)
-![다운로드](https://img.shields.io/visual-studio-marketplace/d/learnwithyan.dedupli?label=다운로드)
-![평점](https://img.shields.io/visual-studio-marketplace/stars/learnwithyan.dedupli?label=평점)
+![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
+![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
 **DeDupli**는 가볍지만 ⚡ 강력한 💪 Visual Studio Code 확장 기능으로, 몇 초 만에 텍스트와 코드를 정리할 수 있도록 도와줍니다. 개발자, 데이터 분석가, 또는 단순히 내용을 정리하고 싶은 분들에게 빠른 해결책이 되어줍니다!
 

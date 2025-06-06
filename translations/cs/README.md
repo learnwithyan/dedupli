@@ -1,8 +1,8 @@
 # 🧹 DeDupli – Vyčisti a uspořádej svůj kód snadno a rychle
 
-![Version](https://img.shields.io/visual-studio-marketplace/v/learnwithyan.dedupli?label=Verze)
-![Downloads](https://img.shields.io/visual-studio-marketplace/d/learnwithyan.dedupli?label=Stažení)
-![Rating](https://img.shields.io/visual-studio-marketplace/stars/learnwithyan.dedupli?label=Hodnocení)
+![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
+![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
 **DeDupli** je lehké ⚡, ale výkonné 💪 rozšíření pro Visual Studio Code, které ti pomůže během několika vteřin vyčistit text nebo kód. Ať už jsi vývojář, analytik nebo jen potřebuješ uspořádat obsah – tento nástroj je tvůj rychlý pomocník!
 

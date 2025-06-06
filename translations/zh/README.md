@@ -1,8 +1,8 @@
 # 🧹 DeDupli – 轻松清理和整理你的代码
 
-![版本](https://img.shields.io/visual-studio-marketplace/v/learnwithyan.dedupli?label=版本)
-![下载量](https://img.shields.io/visual-studio-marketplace/d/learnwithyan.dedupli?label=下载量)
-![评分](https://img.shields.io/visual-studio-marketplace/stars/learnwithyan.dedupli?label=评分)
+![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
+![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
 **DeDupli** 是一款轻量 ⚡ 但功能强大 💪 的 Visual Studio Code 扩展，可以帮助你在几秒钟内清理文本和代码。无论你是开发者、数据分析师，还是仅仅想整理内容——这款工具都是你的快速助手！
 
