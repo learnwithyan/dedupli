@@ -1,25 +1,72 @@
-# DeDupli
+# 🧹 DeDupli – Bereinige & organisiere deinen Code mühelos
 
-Behalten Sie eindeutige Textzeilen bei und vermeiden Sie Duplikate aus der aktuellen Auswahl. Implementieren Sie außerdem einen Befehl zum Randomisieren der Reihenfolge der aktuell ausgewählten Zeilen.
+![Version](https://img.shields.io/visual-studio-marketplace/v/learnwithyan.dedupli?label=Version)
+![Downloads](https://img.shields.io/visual-studio-marketplace/d/learnwithyan.dedupli?label=Downloads)
+![Rating](https://img.shields.io/visual-studio-marketplace/stars/learnwithyan.dedupli?label=Bewertung)
 
-## Wie benutzt man?
+**DeDupli** ist eine leichte ⚡, aber leistungsstarke 💪 Erweiterung für Visual Studio Code, mit der du Text und Code in Sekundenschnelle bereinigen kannst. Egal ob Entwickler, Analyst oder einfach nur jemand, der Inhalte aufräumen möchte – dieses Tool ist dein schneller Helfer!
 
-Diese Erweiterung funktioniert nur mit ausgewähltem Text. Zuerst müssen Sie den gesamten Text auswählen. Drücken Sie dann F1 und geben Sie im Menü „Dedupli“ ein. Drittens können Sie einen der benötigten Befehle auswählen.
+---
 
-## Welche Funktionen haben wir?
+## ✨ Funktionen
 
-- Funktioniert schnell mit jedem Text oder Code
-- Schnelle Änderung von Text in GROSSBUCHSTABEN oder Kleinbuchstaben
-- Sie können Befehle vom F1-Panel oder linken Seitenpanel aufrufen
-- Dedupli ist in den Sprachen cs, de, es, fr, hu, it, ko, pl, pt, ru, tr, zh übersetzt
-- Enthält detaillierte Hilfeanweisungen + Videodokumentation
+🧽 **Doppelte Zeilen entfernen**  
+Entferne redundante Zeilen und behalte nur die eindeutigen Einträge.
 
-##
+🔀 **Zeilen mischen**  
+Mische die Reihenfolge der ausgewählten Zeilen zufällig – ideal für Tests oder Quiz-Fragen.
 
-[![Vscode-Erweiterung](/translations/demo.gif 'Vscode-Erweiterungsdemo')](https://learnwithyan.com)
+🧾 **In Base64 konvertieren**  
+Wandle eine Auswahl einfach in Base64-Format um.
 
-## Verwenden Sie das linke Bedienfeld
+📉 **Leere Zeilen entfernen**  
+Entrümple dein Dokument durch das Entfernen leerer Zeilen.
 
-[![Vscode extension](/translations/demo2.gif 'Vscode extension demo')](https://learnwithyan.com)
+---
 
-#
+## ⚙️ So funktioniert’s
+
+1. 🖱️ **Wähle den Text**, den du verarbeiten möchtest.
+2. 🎯 Drücke `F1` oder `Ctrl+Shift+P`, um die **Befehls-Palette** zu öffnen.
+3. 💼 Gib `DeDupli` ein und wähle einen der folgenden Befehle:
+   - `🧽 Remove Duplicates`
+   - `🔀 Shuffle Lines`
+   - `🧾 Convert to Base64`
+   - `📉 Remove Empty Lines`
+
+*✅ Funktioniert nur mit ausgewähltem Text – du hast die volle Kontrolle.*
+
+[![Vscode extension](/translations/demo.gif 'Vscode Erweiterung Demo')](https://learnwithyan.com)
+
+---
+
+## 👨‍💻 Ideal für
+
+- 💻 **Entwickler** – Bereinige Log-Dateien oder Quellcode.
+- 📊 **Datenanalysten** – Entferne Duplikate und formatiere Daten neu.
+- ✍️ **Autoren & Content Creators** – Mische Inhalte, entferne Leerzeichen und mehr.
+
+---
+
+## 📦 Installation
+
+1. Öffne **Visual Studio Code**.
+2. Gehe zur **Erweiterungsansicht** (`Ctrl+Shift+X`).
+3. Suche nach `DeDupli`.
+4. Klicke auf **Installieren**.
+
+[![Vscode extension](/translations/demo2.gif 'Vscode Erweiterung Demo')](https://learnwithyan.com)
+
+## 🎬 Sieh dir die Erweiterung auf YouTube an:
+
+[Auf YouTube ansehen](https://www.youtube.com/watch?v=f9PHCYbTWbc)
+
+## 🧠 Bleib fokussiert mit DeDupli
+
+Steigere deine Produktivität und Codequalität mit DeDupli:
+
+- 🔍 **Fokussiert bleiben** – Entferne Ablenkungen durch saubere und übersichtliche Dateien.
+- ✨ **Sauberen Code schreiben** – Beseitige Unordnung und hebe das Wesentliche hervor.
+- 🕒 **Zeit sparen** – Automatisiere lästige Aufräumarbeiten mit nur wenigen Klicks.
+
+Halte deinen Workflow scharf und effizient – mit nur einem Befehl.

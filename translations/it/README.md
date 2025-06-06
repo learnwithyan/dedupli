@@ -1,25 +1,72 @@
-# DeDupli
+# 🧹 DeDupli – Pulisci e organizza il tuo codice senza sforzo
 
-Conserva righe di testo distinte, eliminando eventuali duplicati dalla selezione corrente. Inoltre, implementa un comando per randomizzare l'ordine delle linee attualmente selezionate.
+![Versione](https://img.shields.io/visual-studio-marketplace/v/learnwithyan.dedupli?label=Versione)
+![Download](https://img.shields.io/visual-studio-marketplace/d/learnwithyan.dedupli?label=Download)
+![Valutazione](https://img.shields.io/visual-studio-marketplace/stars/learnwithyan.dedupli?label=Valutazione)
 
-## Come usare?
+**DeDupli** è un’estensione leggera ⚡ ma potente 💪 per Visual Studio Code che ti aiuta a pulire testo e codice in pochi secondi. Che tu sia uno sviluppatore, un analista o semplicemente voglia sistemare contenuti — questo strumento è il tuo alleato veloce!
 
-Questa estensione funziona solo con il testo selezionato. Per prima cosa devi selezionare tutto il testo. Premi quindi F1 e nel menu digita "Dedupli". Terzo puoi scegliere uno dei comandi di cui hai bisogno.
+---
 
-## Ano ang mga features natin?
+## ✨ Funzionalità
 
-- Gumagana nang mabilis sa anumang teksto o code
-- Mabilis na nagbabago ng teksto patungo sa UPPERCASE o lowercase
-- Maaari mong tawagin ang mga command mula sa F1 panel o kaliwang panel
-- Ang Dedupli ay isinalin sa mga wika ng cs, de, es, fr, hu, it, ko, pl, pt, ru, tr, zh
-- May detalyadong mga tagubilin sa tulong + video documentation
+🧽 **Rimuovi righe duplicate**  
+Elimina le righe ripetute e conserva solo quelle uniche.
 
-##
+🔀 **Mischia righe**  
+Riorganizza casualmente le righe selezionate — perfetto per creare test o quiz.
 
-[![Estensione Vscode](/translations/demo.gif 'Demo estensione Vscode')](https://learnwithyan.com)
+🧾 **Converti in Base64**  
+Codifica facilmente qualsiasi selezione in formato Base64.
 
-## Utilizzare dal pannello di sinistra
+📉 **Rimuovi righe vuote**  
+Pulisci il documento eliminando le righe vuote inutili.
 
-[![Vscode extension](/translations/demo2.gif 'Vscode extension demo')](https://learnwithyan.com)
+---
 
-#
+## ⚙️ Come usarlo
+
+1. 🖱️ **Seleziona il testo** da elaborare.
+2. 🎯 Premi `F1` o `Ctrl+Shift+P` per aprire la **Palette dei comandi**.
+3. 💼 Digita `DeDupli` e scegli uno dei seguenti comandi:
+   - `🧽 Remove Duplicates`
+   - `🔀 Shuffle Lines`
+   - `🧾 Convert to Base64`
+   - `📉 Remove Empty Lines`
+
+*✅ Funziona solo sul testo selezionato — pieno controllo nelle tue mani.*
+
+[![Estensione Vscode](/translations/demo.gif 'Demo estensione')](https://learnwithyan.com)
+
+---
+
+## 👨‍💻 Perfetto per
+
+- 💻 **Sviluppatori** – Pulisci file di log o codice sorgente.
+- 📊 **Analisti dati** – Prepara i dati eliminando duplicati e riformattando.
+- ✍️ **Scrittori e creatori di contenuti** – Mischia contenuti, rimuovi spazi vuoti e altro.
+
+---
+
+## 📦 Installazione
+
+1. Apri **Visual Studio Code**.
+2. Vai alla vista **Estensioni** (`Ctrl+Shift+X`).
+3. Cerca `DeDupli`.
+4. Clicca su **Installa**.
+
+[![Estensione Vscode](/translations/demo2.gif 'Demo estensione')](https://learnwithyan.com)
+
+## 🎬 Guarda il video dimostrativo su YouTube:
+
+[Guarda su YouTube](https://www.youtube.com/watch?v=f9PHCYbTWbc)
+
+## 🧠 Rimani concentrato con DeDupli
+
+Aumenta produttività e chiarezza del codice con DeDupli:
+
+- 🔍 **Rimani concentrato** – Elimina distrazioni mantenendo i file puliti e ordinati.
+- ✨ **Scrivi codice pulito** – Rimuovi il superfluo e metti in evidenza l’essenziale.
+- 🕒 **Risparmia tempo** – Automatizza le operazioni di pulizia noiose in pochi clic.
+
+Mantieni il tuo flusso di lavoro agile ed efficiente — un comando alla volta.

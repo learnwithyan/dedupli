@@ -1,25 +1,72 @@
-# DeDupli
+# 🧹 DeDupli – Tisztítsd meg és rendezd a kódod egyszerűen
 
-Tartsa meg a különálló szövegsorokat, kiküszöbölve a duplikációkat az aktuális kijelölésből. Ezenkívül hajtson végre egy parancsot az éppen kiválasztott sorok sorrendjének véletlenszerűvé tételére.
+![Verzió](https://img.shields.io/visual-studio-marketplace/v/learnwithyan.dedupli?label=Verzió)
+![Letöltések](https://img.shields.io/visual-studio-marketplace/d/learnwithyan.dedupli?label=Letöltések)
+![Értékelés](https://img.shields.io/visual-studio-marketplace/stars/learnwithyan.dedupli?label=Értékelés)
 
-## Hogyan kell használni?
+A **DeDupli** egy könnyű ⚡, de erőteljes 💪 Visual Studio Code bővítmény, amely segít néhány másodperc alatt megtisztítani a szöveget és a kódot. Legyél fejlesztő, elemző vagy csak tartalmat rendeznél – ez az eszköz a gyors segítőtársad!
 
-Ez a bővítmény csak a kiválasztott szöveggel működik. Először ki kell jelölnie az összes szöveget. Másodszor nyomja meg az F1-et, és írja be a menübe a "Dedupli"-t. Harmadszor kiválaszthat egyet a szükséges parancsok közül.
+---
 
-## Milyen funkcióink vannak?
+## ✨ Funkciók
 
-- Gyorsan működik bármilyen szöveggel vagy kóddal
-- Gyorsan átválthatja a szöveget NAGYBETŰS vagy kisbetűs alakba
-- Parancsokat hívhat a F1 panelről vagy a bal oldali panelről
-- Dedupli le van fordítva cs, de, es, fr, hu, it, ko, pl, pt, ru, tr, zh nyelvekre
-- Részletes súgó utasítások és videós dokumentáció rendelkezésre áll
+🧽 **Ismétlődő sorok eltávolítása**  
+Távolítsd el a felesleges, duplikált sorokat, és hagyd meg az egyedi bejegyzéseket.
 
-##
+🔀 **Sorok keverése**  
+Keverd össze véletlenszerűen a kijelölt sorokat – ideális tesztek vagy kvízek készítéséhez.
 
-[![Vscode-kiterjesztés](/translations/demo.gif 'Vscode-kiterjesztés bemutató')](https://learnwithyan.com)
+🧾 **Base64 kódolás**  
+Egyszerűen kódolj bármilyen kijelölt szöveget Base64 formátumba.
 
-## Használja a bal oldali panelt
+📉 **Üres sorok eltávolítása**  
+Tisztítsd meg a dokumentumot az üres sorok eltávolításával.
 
-[![Vscode extension](/translations/demo2.gif 'Vscode extension demo')](https://learnwithyan.com)
+---
 
-#
+## ⚙️ Használat
+
+1. 🖱️ **Jelöld ki a szöveget**, amit feldolgoznál.
+2. 🎯 Nyomd meg az `F1` vagy `Ctrl+Shift+P` billentyűket a **Parancspaletta** megnyitásához.
+3. 💼 Írd be, hogy `DeDupli`, majd válaszd ki az alábbi parancsok egyikét:
+   - `🧽 Remove Duplicates`
+   - `🔀 Shuffle Lines`
+   - `🧾 Convert to Base64`
+   - `📉 Remove Empty Lines`
+
+*✅ Csak a kijelölt szövegen működik – teljes irányítás a kezedben van.*
+
+[![Vscode bővítmény](/translations/demo.gif 'Vscode bővítmény bemutató')](https://learnwithyan.com)
+
+---
+
+## 👨‍💻 Ideális
+
+- 💻 **Fejlesztőknek** – Naplófájlok vagy forráskód gyors megtisztítása.
+- 📊 **Adat-elemzőknek** – Adatok előkészítése duplikátumok eltávolításával és újraformázással.
+- ✍️ **Íróknak és tartalomkészítőknek** – Tartalom keverése, üres sorok törlése stb.
+
+---
+
+## 📦 Telepítés
+
+1. Nyisd meg a **Visual Studio Code**-ot.
+2. Lépj az **Extensions** nézetre (`Ctrl+Shift+X`).
+3. Keresd meg: `DeDupli`.
+4. Kattints a **Telepítés** gombra.
+
+[![Vscode bővítmény](/translations/demo2.gif 'Vscode bővítmény bemutató')](https://learnwithyan.com)
+
+## 🎬 Nézd meg működés közben a YouTube-on:
+
+[Nézd meg a YouTube-on](https://www.youtube.com/watch?v=f9PHCYbTWbc)
+
+## 🧠 Maradj fókuszált a DeDupli segítségével
+
+Növeld a hatékonyságodat és a kódod átláthatóságát a DeDupli-val:
+
+- 🔍 **Maradj fókuszált** – Tartsd tisztán a fájljaid, hogy semmi ne zavarjon meg.
+- ✨ **Írj tiszta kódot** – Szabadulj meg a feleslegtől, hogy a lényeg maradjon.
+- 🕒 **Spórolj időt** – Automatizáld az unalmas tisztítási feladatokat pár kattintással.
+
+Tartsd a munkafolyamatodat gyorsan, tisztán és hatékonyan – egyetlen paranccsal.
