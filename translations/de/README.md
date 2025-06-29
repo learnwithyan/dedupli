@@ -57,13 +57,18 @@ Entrümple dein Dokument durch das Entfernen leerer Zeilen.
 
 [![Vscode extension](/translations/demo2.gif 'Vscode Erweiterung Demo')](https://learnwithyan.com)
 
+---
+
 ## 🤓 Benutzerstatistiken und Abzeichen:
 [![Vscode extension](/translations/user-progress.jpg 'User progress')](https://learnwithyan.com)
 
+---
 
 ## 🎬 Sieh dir die Erweiterung auf YouTube an:
 
 [Auf YouTube ansehen](https://www.youtube.com/watch?v=f9PHCYbTWbc)
+
+---
 
 ## 🧠 Bleib fokussiert mit DeDupli
 
@@ -74,3 +79,5 @@ Steigere deine Produktivität und Codequalität mit DeDupli:
 - 🕒 **Zeit sparen** – Automatisiere lästige Aufräumarbeiten mit nur wenigen Klicks.
 
 Halte deinen Workflow scharf und effizient – mit nur einem Befehl.
+
+---

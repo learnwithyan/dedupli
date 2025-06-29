@@ -9,6 +9,6 @@ vsc-extension-quickstart.md
 **/.vscode-test.*
 test/**
 files/funcs.js
-files/game-profile.js
 files/game.js
+files/game-profile.js
 extension.js
