@@ -61,6 +61,10 @@ Tidy up your document by getting rid of blank lines.
 
 [Watch on YouTube](https://www.youtube.com/watch?v=f9PHCYbTWbc)
 
+## 🤓 User statistics and Badges:
+[![Vscode extension](/translations/user-progress.jpg 'User progress')](https://learnwithyan.com)
+
+
 ## 🧠 Stay Sharp with DeDupli
 
 Boost your productivity and code clarity with DeDupli:
