@@ -54,3 +54,7 @@ cleaned the code
 ### 3.3.8
 
 - fixed errors of nls
+
+### 3.5.9
+
+- added user progress and badges

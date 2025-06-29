@@ -1,5 +1,5 @@
 # 🧹 DeDupli – Clean & Organize Your Code Effortlessly
-![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Version](https://badgen.net/badge/version/3.5.9/blue)
 ![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
 ![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
@@ -59,6 +59,10 @@ Tidy up your document by getting rid of blank lines.
 ## 🎬 See it in action on YouTube:
 
 [Watch on YouTube](https://www.youtube.com/watch?v=f9PHCYbTWbc)
+
+## 🤓 User statistics and Badges:
+[![Vscode extension](/translations/user-progress.jpg 'User progress')](https://learnwithyan.com)
+
 
 ## 🧠 Stay Sharp with DeDupli
 

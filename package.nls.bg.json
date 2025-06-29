@@ -1,9 +1,10 @@
 {
-  "dedupli.com1.title": "DeDupli - показване на преведени README",
-  "dedupli.com2.title": "DeDupli - премахване на дубликати от избран текст",
-  "dedupli.com3.title": "DeDupli - произволни редове от избран текст",
-  "dedupli.com4.title": "DeDupli - конвертиране на списък в base64",
-  "dedupli.com5.title": "DeDupli - премахване на празни редове",
-  "dedupli.com6.title": "DeDupli - капитализирай редовете",
-  "dedupli.com7.title": "DeDupli - малки букви"
+  "dedupli.com1.title": "DeDupli - 📘 Преведен README",
+  "dedupli.com2.title": "DeDupli - 🧹 Премахни Дубликати",
+  "dedupli.com3.title": "DeDupli - 🎲 Случайни Редове",
+  "dedupli.com4.title": "DeDupli - 🧬 Към Base64",
+  "dedupli.com5.title": "DeDupli - 🚫 Празни Редове",
+  "dedupli.com6.title": "DeDupli - 🔠 Главни Букви",
+  "dedupli.com7.title": "DeDupli - 🔡 Малки Букви",
+  "dedupli.com8.title": "DeDupli - 📊 Статистики и Серии"
 }

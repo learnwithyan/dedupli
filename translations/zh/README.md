@@ -1,6 +1,6 @@
 # 🧹 DeDupli – 轻松清理和整理你的代码
 
-![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Version](https://badgen.net/badge/version/3.5.9/blue)
 ![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
 ![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
@@ -56,6 +56,10 @@
 4. 点击 **安装**。
 
 [![Vscode 扩展演示](/translations/demo2.gif '扩展演示')](https://learnwithyan.com)
+
+## 🤓 用户统计与徽章："
+[![Vscode extension](/translations/user-progress.jpg 'User progress')](https://learnwithyan.com)
+
 
 ## 🎬 在 YouTube 上观看使用演示：
 

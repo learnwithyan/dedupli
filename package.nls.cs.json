@@ -1,9 +1,10 @@
 {
-  "dedupli.com1.title": "DeDupli - zobrazit přeložené README",
-  "dedupli.com2.title": "DeDupli - odstranění duplikátů z vybraného textu",
-  "dedupli.com3.title": "DeDupli - náhodné řádky vybraného textu",
-  "dedupli.com4.title": "DeDupli - převést seznam na base64",
-  "dedupli.com5.title": "DeDupli - odstranění prázdných řádků",
-  "dedupli.com6.title": "DeDupli - kapitalizovat řádky",
-  "dedupli.com7.title": "DeDupli - malá písmena"
+  "dedupli.com1.title": "DeDupli – 📘 Přeložený README",
+  "dedupli.com2.title": "DeDupli – 🧹 Odstranit duplicity",
+  "dedupli.com3.title": "DeDupli – 🎲 Náhodné řádky",
+  "dedupli.com4.title": "DeDupli – 🧬 Do Base64",
+  "dedupli.com5.title": "DeDupli – 🚫 Prázdné řádky",
+  "dedupli.com6.title": "DeDupli – 🔠 Velká písmena",
+  "dedupli.com7.title": "DeDupli – 🔡 Malá písmena",
+  "dedupli.com8.title": "DeDupli – 📊 Statistiky a série"
 }

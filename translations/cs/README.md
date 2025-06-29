@@ -1,6 +1,6 @@
 # 🧹 DeDupli – Vyčisti a uspořádej svůj kód snadno a rychle
 
-![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Version](https://badgen.net/badge/version/3.5.9/blue)
 ![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
 ![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
@@ -56,6 +56,10 @@ Uklidni dokument odstraněním zbytečných prázdných řádků.
 4. Klikni na **Instalovat**.
 
 [![Vscode extension](/translations/demo2.gif 'Ukázka rozšíření')](https://learnwithyan.com)
+
+## 🤓 Statistiky uživatele a odznaky:
+[![Vscode extension](/translations/user-progress.jpg 'User progress')](https://learnwithyan.com)
+
 
 ## 🎬 Podívej se na video na YouTube:
 

@@ -1,9 +1,10 @@
 {
-  "dedupli.com1.title": "DeDupli - show translated README",
-  "dedupli.com2.title": "DeDupli - remove duplicates from selected text",
-  "dedupli.com3.title": "DeDupli - random lines from selected text",
-  "dedupli.com4.title": "DeDupli - convert list to base64",
-  "dedupli.com5.title": "DeDupli - remove empty lines",
-  "dedupli.com6.title": "DeDupli - capitalize lines",
-  "dedupli.com7.title": "DeDupli - lowercase lines"
+  "dedupli.com1.title": "DeDupli - 📘 Translated README",
+  "dedupli.com2.title": "DeDupli - 🧹 Remove Duplicates",
+  "dedupli.com3.title": "DeDupli - 🎲 Random Lines",
+  "dedupli.com4.title": "DeDupli - 🧬 To Base64",
+  "dedupli.com5.title": "DeDupli - 🚫 Empty Lines",
+  "dedupli.com6.title": "DeDupli - 🔠 Capitalize Lines",
+  "dedupli.com7.title": "DeDupli - 🔡 Lowercase Lines",
+  "dedupli.com8.title": "DeDupli - 📊 Stats & Streaks"
 }

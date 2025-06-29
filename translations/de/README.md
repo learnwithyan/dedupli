@@ -1,6 +1,6 @@
 # 🧹 DeDupli – Bereinige & organisiere deinen Code mühelos
 
-![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Version](https://badgen.net/badge/version/3.5.9/blue)
 ![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
 ![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
@@ -56,6 +56,10 @@ Entrümple dein Dokument durch das Entfernen leerer Zeilen.
 4. Klicke auf **Installieren**.
 
 [![Vscode extension](/translations/demo2.gif 'Vscode Erweiterung Demo')](https://learnwithyan.com)
+
+## 🤓 Benutzerstatistiken und Abzeichen:
+[![Vscode extension](/translations/user-progress.jpg 'User progress')](https://learnwithyan.com)
+
 
 ## 🎬 Sieh dir die Erweiterung auf YouTube an:
 

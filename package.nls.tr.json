@@ -1,9 +1,10 @@
 {
-  "dedupli.com1.title": "DeDupli - çevrilmiş BENİOKU'yu göster",
-  "dedupli.com2.title": "DeDupli - seçilen metindeki kopyaları kaldır",
-  "dedupli.com3.title": "DeDupli - seçilen metinden rastgele çizgiler",
-  "dedupli.com4.title": "DeDupli - listeyi base64'e dönüştür",
-  "dedupli.com5.title": "DeDupli - boş satırları kaldır",
-  "dedupli.com6.title": "DeDupli - Satırları Büyük Harfe Dönüştür",
-  "dedupli.com7.title": "DeDupli - küçük harfler"
+  "dedupli.com1.title": "DeDupli – 📘 Çevrilmiş README",
+  "dedupli.com2.title": "DeDupli – 🧹 Yinelenenleri Kaldır",
+  "dedupli.com3.title": "DeDupli – 🎲 Rastgele Satırlar",
+  "dedupli.com4.title": "DeDupli – 🧬 Base64'e Dönüştür",
+  "dedupli.com5.title": "DeDupli – 🚫 Boş Satırları Sil",
+  "dedupli.com6.title": "DeDupli – 🔠 Büyük Harf Yap",
+  "dedupli.com7.title": "DeDupli – 🔡 Küçük Harf Yap",
+  "dedupli.com8.title": "DeDupli – 📊 İstatistikler ve Seriler"
 }

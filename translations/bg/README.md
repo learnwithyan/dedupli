@@ -1,6 +1,6 @@
 # 🧹 DeDupli – Почисти и организирай кода си с лекота
 
-![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Version](https://badgen.net/badge/version/3.5.9/blue)
 ![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
 ![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
@@ -56,6 +56,10 @@
 4. Натисни **Инсталирай**.
 
 [![Vscode extension](/translations/demo2.gif 'Демо на разширението')](https://learnwithyan.com)
+
+## 🤓 Статистика на потребителя и значки:"
+[![Vscode extension](/translations/user-progress.jpg 'User progress')](https://learnwithyan.com)
+
 
 ## 🎬 Виж го в действие в YouTube:
 

@@ -1,9 +1,10 @@
 {
-  "dedupli.com1.title": "DeDupli - mostra il README tradotto",
-  "dedupli.com2.title": "DeDupli: rimuove i duplicati dal testo selezionato",
-  "dedupli.com3.title": "DeDupli: righe casuali dal testo selezionato",
-  "dedupli.com4.title": "DeDupli - convertire la lista in base64",
-  "dedupli.com5.title": "DeDupli - rimuove le righe vuote",
-  "dedupli.com6.title": "DeDupli - Maiuscole delle righe",
-  "dedupli.com7.title": "DeDupli - minuscole"
+  "dedupli.com1.title": "DeDupli – 📘 README tradotto",
+  "dedupli.com2.title": "DeDupli – 🧹 Rimuovi duplicati",
+  "dedupli.com3.title": "DeDupli – 🎲 Righe casuali",
+  "dedupli.com4.title": "DeDupli – 🧬 In Base64",
+  "dedupli.com5.title": "DeDupli – 🚫 Righe vuote",
+  "dedupli.com6.title": "DeDupli – 🔠 Maiuscole",
+  "dedupli.com7.title": "DeDupli – 🔡 Minuscole",
+  "dedupli.com8.title": "DeDupli – 📊 Statistiche e serie"
 }

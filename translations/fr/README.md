@@ -1,6 +1,6 @@
 # 🧹 DeDupli – Nettoyez et organisez votre code sans effort
 
-![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Version](https://badgen.net/badge/version/3.5.9/blue)
 ![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
 ![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
@@ -56,6 +56,10 @@ Nettoyez votre document en supprimant les lignes vides inutiles.
 4. Cliquez sur **Installer**.
 
 [![Extension Vscode](/translations/demo2.gif 'Démonstration de l’extension')](https://learnwithyan.com)
+
+## 🤓 Statistiques utilisateur et badges :
+[![Vscode extension](/translations/user-progress.jpg 'User progress')](https://learnwithyan.com)
+
 
 ## 🎬 Voir la démonstration sur YouTube :
 

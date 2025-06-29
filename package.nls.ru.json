@@ -1,9 +1,10 @@
 {
-  "dedupli.com1.title": "DeDupli - показать переведенный README",
-  "dedupli.com2.title": "DeDupli - удалить дубликаты из выделенного текста",
-  "dedupli.com3.title": "DeDupli - рандомно перемешать строки",
-  "dedupli.com4.title": "DeDupli - преобразовать список в base64",
-  "dedupli.com5.title": "DeDupli - удалить пустые строки",
-  "dedupli.com6.title": "DeDupli - Преобразовать строки в верхний регистр",
-  "dedupli.com7.title": "DeDupli - строчные буквы"
+  "dedupli.com1.title": "DeDupli – 📘 Переведённый README",
+  "dedupli.com2.title": "DeDupli – 🧹 Удалить дубликаты",
+  "dedupli.com3.title": "DeDupli – 🎲 Случайные строки",
+  "dedupli.com4.title": "DeDupli – 🧬 В Base64",
+  "dedupli.com5.title": "DeDupli – 🚫 Пустые строки",
+  "dedupli.com6.title": "DeDupli – 🔠 Преобразовать в верхний регистр",
+  "dedupli.com7.title": "DeDupli – 🔡 Преобразовать в нижний регистр",
+  "dedupli.com8.title": "DeDupli – 📊 Статистика и серии"
 }

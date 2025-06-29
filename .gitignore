@@ -1,3 +1,6 @@
 node_modules/
+.vscode/
 files/funcs.js
+files/game.js
+files/game-profile.js
 extension.js

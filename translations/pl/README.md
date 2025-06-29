@@ -1,6 +1,6 @@
 # 🧹 DeDupli – Łatwe czyszczenie i organizacja kodu
 
-![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Version](https://badgen.net/badge/version/3.5.9/blue)
 ![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
 ![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
@@ -56,6 +56,10 @@ Posprzątaj dokument, usuwając puste linie.
 4. Kliknij **Zainstaluj**.
 
 [![Rozszerzenie Vscode](/translations/demo2.gif 'Demo rozszerzenia')](https://learnwithyan.com)
+
+## 🤓 Statystyki użytkownika i odznaki:
+[![Vscode extension](/translations/user-progress.jpg 'User progress')](https://learnwithyan.com)
+
 
 ## 🎬 Zobacz działanie na YouTube:
 

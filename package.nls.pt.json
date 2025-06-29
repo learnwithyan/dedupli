@@ -1,9 +1,10 @@
 {
-  "dedupli.com1.title": "DeDupli - mostrar README traduzido",
-  "dedupli.com2.title": "DeDupli - remova duplicatas do texto selecionado",
-  "dedupli.com3.title": "DeDupli - linhas aleatórias do texto selecionado",
-  "dedupli.com4.title": "DeDupli - converter lista para base64",
-  "dedupli.com5.title": "DeDupli - remover linhas vazias",
-  "dedupli.com6.title": "DeDupli - Capitalizar linhas",
-  "dedupli.com7.title": "DeDupli - letras minúsculas"
+  "dedupli.com1.title": "DeDupli – 📘 Przetłumaczony README",
+  "dedupli.com2.title": "DeDupli – 🧹 Usuń duplikaty",
+  "dedupli.com3.title": "DeDupli – 🎲 Losowe linie",
+  "dedupli.com4.title": "DeDupli – 🧬 Na Base64",
+  "dedupli.com5.title": "DeDupli – 🚫 Puste linie",
+  "dedupli.com6.title": "DeDupli – 🔠 Wielkie litery",
+  "dedupli.com7.title": "DeDupli – 🔡 Małe litery",
+  "dedupli.com8.title": "DeDupli – 📊 Statystyki i serie"
 }

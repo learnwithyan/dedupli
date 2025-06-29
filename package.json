@@ -2,7 +2,7 @@
   "name": "dedupli",
   "displayName": "DeDupli remove duplicates",
   "description": "Retain distinct lines of text, eliminating any duplicates from the current selection. Additionally, implement a command for randomizing the order of the presently selected lines.",
-  "version": "3.5.8",
+  "version": "3.5.9",
   "publisher": "learnwithyan",
   "icon": "images/logo_128.png",
   "bugs": {
@@ -18,7 +18,7 @@
   "activationEvents": [
     "onCommand"
   ],
-  "main": "./extension.obf.js",
+  "main": "./extension.js",
   "contributes": {
     "views": {
       "myCustomContainer": [
@@ -71,6 +71,11 @@
       {
         "command": "dedupli.com7",
         "title": "%dedupli.com7.title%",
+        "icon": "$(sort-precedence)"
+      },
+      {
+        "command": "dedupli.com8",
+        "title": "%dedupli.com8.title%",
         "icon": "$(sort-precedence)"
       }
     ]
@@ -126,5 +131,9 @@
     "eslint": "^8.56.0",
     "jest": "^29.7.0",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "conf": "^14.0.0"
   }
 }

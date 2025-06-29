@@ -1,6 +1,6 @@
 # 🧹 DeDupli – Kodunuzu Kolayca Temizleyin ve Düzenleyin
 
-![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Version](https://badgen.net/badge/version/3.5.9/blue)
 ![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
 ![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
@@ -56,6 +56,10 @@ Belgenizi boş satırlardan temizler.
 4. **Yükle** butonuna tıklayın.
 
 [![Vscode eklentisi](/translations/demo2.gif 'Eklenti demosu')](https://learnwithyan.com)
+
+## 🤓 Kullanıcı istatistikleri ve rozetler:
+[![Vscode extension](/translations/user-progress.jpg 'User progress')](https://learnwithyan.com)
+
 
 ## 🎬 YouTube’da nasıl çalıştığını izleyin:
 

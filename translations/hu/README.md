@@ -1,6 +1,6 @@
 # 🧹 DeDupli – Tisztítsd meg és rendezd a kódod egyszerűen
 
-![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Version](https://badgen.net/badge/version/3.5.9/blue)
 ![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
 ![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
@@ -56,6 +56,10 @@ Tisztítsd meg a dokumentumot az üres sorok eltávolításával.
 4. Kattints a **Telepítés** gombra.
 
 [![Vscode bővítmény](/translations/demo2.gif 'Vscode bővítmény bemutató')](https://learnwithyan.com)
+
+## 🤓 Felhasználói statisztikák és jelvények:
+[![Vscode extension](/translations/user-progress.jpg 'User progress')](https://learnwithyan.com)
+
 
 ## 🎬 Nézd meg működés közben a YouTube-on:
 

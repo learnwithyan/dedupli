@@ -1,6 +1,6 @@
 # 🧹 DeDupli – 손쉽게 코드 정리 및 정돈하기
 
-![Version](https://badgen.net/badge/version/3.5.6/blue)
+![Version](https://badgen.net/badge/version/3.5.9/blue)
 ![Downloads](https://badgen.net/badge/downloads/4.5k/blue)
 ![Rating](https://badgen.net/badge/rating/⭐⭐⭐⭐☆/blue)
 
@@ -56,6 +56,10 @@
 4. **설치** 버튼을 클릭합니다.
 
 [![Vscode 확장 기능](/translations/demo2.gif 'Vscode 확장 데모')](https://learnwithyan.com)
+
+## 🤓 사용자 통계 및 배지:
+[![Vscode extension](/translations/user-progress.jpg 'User progress')](https://learnwithyan.com)
+
 
 ## 🎬 YouTube에서 사용법 영상 보기:
 
