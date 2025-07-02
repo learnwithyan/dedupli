@@ -5,7 +5,6 @@
 vsc-extension-quickstart.md
 **/jsconfig.json
 **/*.map
-**/.eslintrc.json
 **/.vscode-test.*
 test/**
 files/funcs.js
