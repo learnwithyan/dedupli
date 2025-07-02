@@ -11,14 +11,14 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "sourceType": "module"
+    "sourceType": "script"
   },
   "rules": {
     "no-const-assign": "off",
     "no-this-before-super": "off",
-    "no-undef": "off",
+    "no-undef": "warn",
     "no-unreachable": "off",
-    "no-unused-vars": "off",
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
     "constructor-super": "off",
     "valid-typeof": "off"
   }
