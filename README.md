@@ -22,6 +22,13 @@ Easily encode any selection into Base64 format.
 📉 **Remove Empty Lines**  
 Tidy up your document by getting rid of blank lines.
 
+🎮 **User Statistics, Badges & Boosts**  
+Track your cleanup streaks, unlock achievements, and level up to become a hard-skilled user. Use the Magic Ball to boost your profile and gain extra XP!
+
+| ![Delete](/images/delete_read.png 'Delete badges') | ![Skill levels](images/levels_read.png 'Skill levels') | ![Magic ball](images/mball_read.png 'Magic Ball') |
+|:--:|:--:|:--:|
+| Delete & Earn Badges	| Rich Skill Levels | Magic Ball Profile Boost |
+
 ---
 
 ## ⚙️ How to Use
